@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiH - M1S02 - Exercícios</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="../M1S03/styles/base.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/atom-one-dark.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html"><button>voltar</button></a>
+        <div>
+            <h2>Módulo 1 - <span>Exercícios da Semana 02</span></h2> 
+        </div>        
+    </header>
+    
+    <div id="main">
+        <ul>
+            <li onclick="showExerciseDescription(2)" class="pointer">Ex 2 - Dada uma idade exibe a classificação dela
+            </li>
+            <li id="ex2-description" class="hidden description">
+                <p>
+                    Utilizando estrutura condicional <strong>exiba</strong> a descrição da classificação da
+                    <strong>idade</strong> da
+                    pessoa de
+                    acordo com os dados abaixo:
+                </p>
+
+                <p>
+                    Jovens - Indivíduos de até 15 anos;<br>
+                    Adultos - Indivíduos com idade entre 16 até 64 anos;<br>
+                    Idosos - Indivíduos de 65 anos em diante.
+                </p>
+
+                <p>Utilize prompt para solicitar a idade e alert para exibir a classificação.</p>
+
+                <button onclick="showCode(2)">ver código</button>
+                
+                <button onclick="exercise2()">Rodar exercício</button>
+            </li>
+
+            <li onclick="showExerciseDescription(3)" class="pointer">Ex 3 - Tabuada</li>
+            <li id="ex3-description" class="hidden description">
+                <p>Utilizando estrutura de repetição realize a tabuada do número x e exiba ela da seguinte forma:</p>
+
+                <p>
+                    2 x 0 = 0<br>
+                    2 x 1 = 2<br>
+                    ....<br>
+                    2 x 10 = 20 
+                </p>                   
+                
+                <p>O número para realizar a tabuada deve ser solicitado via prompt e o resultado apresentado via alert.</p>
+
+                <button onclick="showCode(3)">ver código</button>
+                <button onclick="exercise3()">Rodar exercício</button>
+            </li>
+
+            <li onclick="showExerciseDescription(4)" class="pointer">Ex 4 - Somar números</li>
+            <li id="ex4-description" class="hidden description">
+                <p>
+                    Utilizando estrutura de repetição, some os números digitados através do prompt enquanto o número for diferente de -1, 
+                    quando digitado -1 pare de exibir o prompt e exiba através de um alert o resultado da soma dos números digitados.
+                </p>
+
+                <button onclick="showCode(4)">ver código</button>
+                <button onclick="exercise4()">Rodar exercício</button>
+            </li>
+
+            <li onclick="showExerciseDescription(5)" class="pointer">Ex 5 - Pares e Impares</li>
+            <li id="ex5-description" class="hidden description">
+                <p>
+                    Exiba um prompt solicitando a entrada de um número para saber quantos pares e impares existem de 0 até o número digitado.
+                    Calcule o número de pares e impares e exiba o resultado utilizando um alert.
+                </p>
+
+                <button onclick="showCode(5)">ver código</button>
+                <button onclick="exercise5()">Rodar exercício</button>
+            </li>
+
+            <li onclick="showExerciseDescription(6)" class="pointer">Ex 6 - Construa uma calculadora</li>
+            <li id="ex6-description" class="hidden description">
+                <p> Faça 3 prompts ao usuário: </p>
+                
+                <p>
+                    1. no primeiro, pergunte qual o tipo de cálculo ele deseja fazer (“+”, “-”, “*” ou “/”);<br>
+                    2. no segundo, pergunte o primeiro valor que deseja calcular;<br>
+                    3. no terceiro, o segundo valor que deseja calcular.  
+                </p>               
+
+                <p>
+                    Em seguida, realize o cálculo e exiba na tela um “alert” contendo o texto “O resultado do seu cálculo é: X”, onde X é o 
+                    resultado final do cálculo solicitado pelo usuário.
+                </p>
+
+                <button onclick="showCode(6)">ver código</button>
+                <button onclick="exercise6()">Rodar exercício</button>
+            </li>
+
+            <li onclick="showExerciseDescription(7)" class="pointer">Ex 7 - Verifique a estação do ano</li>
+            <li id="ex7-description" class="hidden description">
+                <p>
+                    Baseado na data atual, seu código deve verificar qual a estação atual do ano no hemisfério sul, exibindo através de um alert a estação atual. 
+                    Considere:                  
+                </p>
+
+                <p> 
+                    - 22/12 a 21/03 - Verão;<br> 
+                    - 22/03 a 21/06 - Outono; <br>
+                    - 22/06 a 21/09 - Inverno; <br>
+                    - 22/09 a 21/12 - Primavera.
+                </p>
+
+                <button onclick="showCode(7)">ver código</button>
+                <button onclick="exercise7()">Rodar exercício</button>
+            </li>
+
+            <li onclick="showExerciseDescription(8)" class="pointer">Ex 8 - Número primo</li>
+            <li id="ex8-description" class="hidden description">
+                <p>Percorra os números de 0 a 1000 e exiba no console os números primos e ao final a quantidade de números primos que existem nesse intervalo.</p>
+                
+                <button onclick="showCode(8)">ver código</button>
+                <button onclick="exercise8()">Rodar exercício</button>
+            </li>
+
+            <li onclick="showExerciseDescription(9)" class="pointer">Ex 9 - Construa uma “calculadora” de P.A</li>
+            <li id="ex9-description" class="hidden description">
+                <p>
+                    Ao entrar na página, seu script deve realizar 2 prompts ao usuário: um solicitando um “valor inicial”, e outro um valor para a “raíz”. 
+                    Após o usuário inserir esses valores, o seu script deve calcular os 10 primeiros valores da sequência e exibir na tela. 
+                </p>
+
+                <p>
+                    Relembrando: P.A. (Progressão Aritmética) é uma sequência numérica em que cada termo, a partir do segundo, é igual à soma do termo anterior com a raiz. 
+                    Exemplo: Valor inicial = 1; raiz = 3; P.A. = 1, 4, 7, 10, 13, 16, 19, 22, 25, 28.
+                </p>
+
+                <button onclick="showCode(9)">ver código</button>
+                <button onclick="exercise9()">Rodar exercício</button>
+            </li>
+        </ul>
+
+        <div class="code-container hidden-code">
+            <div id="code-container-frame">
+                <div class="header">
+                    <h1 id="code-title">Código do exercício #n</h1>
+                    <div id="code-close" onclick="closeCode()"> x </div>
+                </div>
+                
+                <pre>
+                    <code id="code"></code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./scripts/index.js"></script>
+<script src="./scripts/ex2.js"></script>
+<script src="./scripts/ex3.js"></script>
+<script src="./scripts/ex4.js"></script>
+<script src="./scripts/ex5.js"></script>
+<script src="./scripts/ex6.js"></script>
+<script src="./scripts/ex7.js"></script>
+<script src="./scripts/ex8.js"></script>
+<script src="./scripts/ex9.js"></script>
+
+</html>

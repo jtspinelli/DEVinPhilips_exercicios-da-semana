@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiH - M1S03 - Exercícios</title>
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html"><button>voltar</button></a>
+        <div>
+            <h2>Módulo 1 - <span>Exercícios da Semana 03</span></h2> 
+        </div>        
+    </header>
+
+    <main>
+        <ul>
+            <li id="ex1">
+                <div class="exercise-title" onclick="showExercise(event)">Ex 1 - Use Let, Const e Array</div>
+
+                <div class="description hidden">
+                    <p>Implemente uma função "<strong>procuraMinMax</strong>" que receba como parâmetro um array (numérico) e identifique o <strong>menor</strong> e o <strong>maior</strong> valor do mesmo.</p>
+                    
+                    <p>Imprima no console estes valores ou <Strong>"Não é possível encontrar"</Strong> quando não for possível.</p>
+
+                    <p> Teste a função com as seguintes entradas:</p>
+
+                    <p> - [56, 65, 64, -3, 23, 42, -15, 65, 14, 32, 78, 70, 47]<br>
+                        - [] <br>
+                        - [1] <br>
+                        - [1, -1] <br>
+                        - null <br>
+                        - [-2,-2,-2,-2] <br>
+                        - [20,10, 30] 
+                    </p>
+
+                    <p> 
+                        <br>
+                        ___
+                        <br>
+                        <br>
+                        Obs.: Use let e const para declarar variáveis se for necessário.
+                        Extra: Faça com uma arrow function.
+                    </p>
+
+                    <div class="exercise-buttons">
+                        <!-- <button>ver código</button> -->
+                        <button class="run-button" onclick="runExercise(event)">Rodar exercício</button>
+                    </div>
+                </div>
+            </li>
+
+            <li id="ex2">
+                <div class="exercise-title" onclick="showExercise(event)">Ex 2 - Mensagem Arrow</div>
+
+                <div class="description hidden">
+                    <p>Em um arquivo <strong>app.js</strong> (incluído em <strong>index.html</strong>) faça o seguinte:</p>
+                    
+                    <p>No documento <strong>js</strong> faça uma <strong>arrow function</strong> para retornar uma mensagem (string) de <strong>"Olá, Mundo!"</strong>.</p>
+
+                    <p>Armazene esta <strong>arrow function</strong> em uma constante (<strong>const</strong>) de nome <strong>mensagemOla</strong>.</p>
+
+                    <p>Chame a função <strong>mensagemOla</strong> e exiba o retorno desta função no console.</p>
+
+                    <p>Ajuste a função <strong>mensagemOla</strong> para que receba um parâmetro <strong>nome</strong> e retorne a mensagem <strong>"Olá, [nome]!"</strong>.</p>
+
+                    <p class="blockquote"> Exemplo:</p>
+
+                    <pre>
+                        <span class="linenumbers">
+                            <i></i>
+                            <i></i>
+                        </span>
+                        <code>mensagemOla("Mariana");<br>// "Olá, Mariana!"</code>                        
+                    </pre>   
+
+                    <p>Ao final, devemos ter uma função que monta uma mensagem de olá customizada com o nome informado por parâmetro.</p>
+
+                    <p>
+                        Extra: Caso queira, podes experimentar criar um <strong>campo de texto</strong>, um <strong>botão</strong> e um <strong>parágrafo</strong> em <strong>index.html</strong> e fazer com que a função de nome seja executada ao pressionarmos o botão, que o nome pode seja lido do campo de texto e a mensagem seja exibida no parágrafo.
+                    </p>
+
+                    <div class="flex-column ex2-extra-content">
+                        <input type="text" name="" id="ex2-text-input" placeholder="escreva seu nome">
+                        <button onclick="saudar()">Saudar</button>
+                        <p id="ex2-result">O resultado aparecerá aqui.</p>
+                    </div>                   
+
+                    <div class="exercise-buttons">
+                        <!-- <button>ver código</button> -->
+                        <button class="run-button" onclick="runExercise(event)">Rodar exercício</button>
+                    </div>
+                </div>
+            </li>
+
+            <li id="ex3">
+                <div class="exercise-title" onclick="showExercise(event)">Ex 3 - Concatenar Spread</div>
+
+                <div class="description hidden">
+                    <p>Para treinar os conceitos de Spread.</p>
+
+                    <p>
+                        Crie dois arquivos:<br>
+                        - <strong>index.html</strong><br>
+                        - <strong>app.js</strong>
+                    </p>
+
+                    <p>
+                        Em <strong>app.js</strong> desenvolva uma função que receba <strong>dois arrays</strong> e realize a <strong>concatenação</strong> entre eles utilizando o operador <strong>Spread</strong>.<br>
+                        Apresente o resultado no console.log(novoArray).
+                    </p>
+
+                    <p class="blockquote"> Exemplo:</p>
+
+                    <pre>
+                        <span class="linenumbers">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </span>
+                        <code>const novoArray = concatena([1, 2, 3], [4, 5, 6]);<br>console.log(novoArray);<br>// novo array deve ser [1, 2, 3, 4, 5, 6]</code>                        
+                    </pre>
+                    
+                    <p><strong>Obs.:</strong> Em <strong>index.html</strong> deve ser incluído o arquivo <strong>app.js</strong>, para executarmos o script com a função.</p>
+
+                    <p class="blockquote" style="margin: 0;"> Dica:</p>
+                    <p class="blockquote"> 
+                        <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_syntax" target="_blank">                          
+                            <span style="position: relative;">
+                                <img src="https://developer.mozilla.org/favicon-48x48.cbbd161b.png" alt="">
+                            </span>
+                            <span class="text">
+                                Sintaxe de Espalhamento - JavaScript | MDN
+                            </span>                          
+                        </a>
+                    </p>
+
+                    <hr>
+
+                    <p>Extra: Faça com uma arrow function.</p>
+                    
+                    <div class="exercise-buttons">
+                        <!-- <button>ver código</button> -->
+                        <button class="run-button" onclick="runExercise(event)">Rodar exercício</button>
+                    </div>
+                </div>
+            </li>
+
+            <li id="ex4">
+                <div class="exercise-title" onclick="showExercise(event)">Ex 4 - Mesclando Objetos</div>
+
+                <div class="description hidden">
+                    <p>
+                        Para exercitarmos <em>spread</em> com objetos:<br>
+                        Em um arquivo <strong>app.js</strong> incluído em <strong>index.html</strong> escreva uma função de nome <strong>mesclaObjetos</strong>, 
+                        que aceita dois objetos como parâmetro e retorna um novo objeto que contem todos os pares chave-valor do primeiro e do segundo objetos.
+                    </p>
+
+                    <p class="blockquote"> Exemplo:</p>
+
+                    <pre>
+                        <span class="linenumbers">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </span>
+                        <code>const objUm = { a: 1, b: 2 };<br>const objDois = { c: 3, d: 4 };<br>const novoObjeto = mesclaObjetos(objUm, objDois);<br>console.log(novoObjeto);<br>// { a: 1, b: 2, c: 3, d: 4 }</code>                        
+                    </pre>
+
+                    <hr>
+
+                    <p>Extra: Faça utilizando arrow function.</p>
+
+                    <div class="exercise-buttons">
+                        <!-- <button>ver código</button> -->
+                        <button class="run-button" onclick="runExercise(event)">Rodar exercício</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </main>
+    
+    <script src="./scripts/ex1.js"></script>
+    <script src="./scripts/ex2.js"></script>
+    <script src="./scripts/ex3.js"></script>
+    <script src="./scripts/ex4.js"></script>
+    <script src="./scripts/app.js"></script>
+</body>
+</html>
