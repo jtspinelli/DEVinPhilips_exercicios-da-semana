@@ -7,6 +7,8 @@
     <title>DiH - M1S03 - Exercícios</title>
     <link rel="stylesheet" href="./styles/base.css">
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/atom-one-dark.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
 </head>
 <body>
     <header>
@@ -47,7 +49,7 @@
                     </p>
 
                     <div class="exercise-buttons">
-                        <!-- <button>ver código</button> -->
+                        <button class="code-button" onclick="showCode(1)">ver código</button>
                         <button class="run-button" onclick="runExercise(event)">Rodar exercício</button>
                     </div>
                 </div>
@@ -90,7 +92,7 @@
                     </div>                   
 
                     <div class="exercise-buttons">
-                        <!-- <button>ver código</button> -->
+                        <button class="code-button" onclick="showCode(2)">ver código</button>
                         <button class="run-button" onclick="runExercise(event)">Rodar exercício</button>
                     </div>
                 </div>
@@ -143,7 +145,7 @@
                     <p>Extra: Faça com uma arrow function.</p>
                     
                     <div class="exercise-buttons">
-                        <!-- <button>ver código</button> -->
+                        <button class="code-button" onclick="showCode(3)">ver código</button>
                         <button class="run-button" onclick="runExercise(event)">Rodar exercício</button>
                     </div>
                 </div>
@@ -177,12 +179,25 @@
                     <p>Extra: Faça utilizando arrow function.</p>
 
                     <div class="exercise-buttons">
-                        <!-- <button>ver código</button> -->
+                        <button class="code-button" onclick="showCode(4)">ver código</button>
                         <button class="run-button" onclick="runExercise(event)">Rodar exercício</button>
                     </div>
                 </div>
             </li>
         </ul>
+
+        <div class="code-container hidden-code">
+            <div id="code-container-frame">
+                <div class="header">
+                    <h1 id="code-title">Código do exercício #n</h1>
+                    <div id="code-close" onclick="closeCode()"> x </div>
+                </div>
+                
+                <pre>
+                    <code id="code"></code>
+                </pre>
+            </div>
+        </div>
     </main>
     
     <script src="./scripts/ex1.js"></script>

@@ -26,7 +26,7 @@ ul {
     overflow: hidden;
     transition: 1s;
     position: relative;
-    padding-bottom: 50px;
+    padding-bottom: 72px;
 }
 
 .description p {
@@ -39,6 +39,20 @@ ul {
     max-height: 0;
     transition: .5s;
     padding: 0;
+}
+
+.code-button {
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+    height: 30px;
+    background-color: #000000;
+    color: white;
+    border-radius: 30px 0px 0px 0px;
+    width: 120px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
 }
 
 .run-button {    
@@ -167,4 +181,64 @@ pre code {
     .exercise-title {
         font-size: .9rem;
     }
+}
+
+.code-container {
+    z-index: 1;
+    position: absolute;
+    min-height: max(100vh, 100%);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.7);
+    padding: 20px;
+    top: 0;
+}
+
+.code-container > div {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.hidden-code {
+    display: none;
+}
+
+.code-container .header {
+    background-color: #172b4d;
+    color: #d7e3f8;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+#code-close{
+    cursor: pointer;
+}
+
+#code-close:hover {
+    color: red;
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.code-container .header h1 {
+    margin: 0;    
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.code-container pre {
+    background-color: #282b2e;
+    padding: 10px;
+    color: #abb2bf;
+    margin: 0;
+    max-width: 130%;
+    overflow-x: auto;
+}
+
+code, code span {
+    font-family: monospace;
 }
