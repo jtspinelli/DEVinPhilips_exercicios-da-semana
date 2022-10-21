@@ -1,9 +1,7 @@
 function exercicio5(){
     alert("Este exercício aparece no console.")
 
-    const getSum = (...numbers) => {
-        return numbers.reduce((total, current) => {return total + current});
-    }
+    const getSum = (...numbers) => numbers.reduce((total, current) => total + current );
 
     const nums = [1,2,3,4];
 
