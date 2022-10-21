@@ -244,6 +244,96 @@
                     </div>
                 </div>
             </li>
+
+            <li id="ex6">
+                <div class="exercise-title" onclick="showExercise(event)">Ex 6 - Palíndromo</div>
+
+                <div class="description hidden">
+                    <p>
+                        Um <em>palindrome</em> (palíndromo), segundo o dicionário Houaiss, 
+                        <strong>"diz-se de frase ou palavra que se pode ler, indiferentemente, da esquerda para direita ou vice-versa"</strong>, 
+                        como por exemplo: <em>osso</em>, <em>Ana</em>, <em>radar</em>. 
+                    </p>
+
+                    <p>Ou seja, é uma palavra que quando lida de trás pra frente tem o mesmo significado.</p>
+
+                    <p>Implemente uma função em JavaScript que receba uma <strong>string</strong> como parâmetro e retorne se determinada palavra é um palindromo ou não.</p>
+
+                    <p class="blockquote"> Exemplo:</p>
+
+                    <pre>
+                        <span class="linenumbers">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </span>
+
+                        <code>const teste1 = verificaPalindromo("ana");<br>// true<br><br>const teste2 = verificaPalindromo("julia");<br>// false</code>                        
+                    </pre>
+
+                    <hr>
+
+                    <p>
+                        Obs.: Use let e const para declarar variáveis se for necessário.<br>
+                        Extra: Faça com uma arrow function.
+                    </p>
+
+                    <div class="exercise-buttons">
+                        <button class="code-button" onclick="showCode(6)">ver código</button>
+                        <button class="run-button" onclick="runExercise(event)">Rodar exercício</button>
+                    </div>
+                </div>
+            </li>
+
+            <li id="ex7">
+                <div class="exercise-title" onclick="showExercise(event)">Ex 7 - Destruct</div>
+
+                <div class="description hidden">
+                    <p>Em um arquivo <strong>app.js</strong> incluído em <strong>index.html</strong>, crie um objeto com a seguinte estrutura:</p>
+
+                    <pre>
+                        <span class="linenumbers">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </span>
+
+                        <code>const pessoa = {<br>  nome: 'Ada',<br>  idade: 36<br>  profissao: 'matemática'<br>};</code>                        
+                    </pre>
+
+                    <p>
+                        Faça uma função que receba este objeto por parâmetro, desestruture-o no começo da função (utilizando _destruct_) criando três variáveis 
+                        (<strong>nome</strong>, <strong>idade</strong>, <strong>profissao</strong>).
+                    </p>
+
+                    <p>Faça ainda com que a função retorne uma <em>string</em> com a seguinte mensagem:</p>
+
+                    <pre>
+                        <span class="linenumbers">
+                            <i></i>
+                        </span>
+
+                        <code>"Esta é Ada, tem 36 anos e é matemática."</code>                        
+                    </pre>
+
+                    <p>Concatene as variáveis criadas com _destruct_ para formar a mensagem.</p>
+
+                    <p>Chame a função passando o objeto por parâmetro e exiba o retorno no console.</p>
+
+                    <hr>
+
+                    <p>Extra: Faça o destruct acontecer diretamente na linha de declaração dos parâmetros da função. Por fim faça com uma arrow function.</p>
+
+                    <div class="exercise-buttons">
+                        <button class="code-button" onclick="showCode(7)">ver código</button>
+                        <button class="run-button" onclick="runExercise(event)">Rodar exercício</button>
+                    </div>
+                </div>
+            </li>
         </ul>
 
         <div class="code-container hidden-code">
@@ -265,6 +355,8 @@
     <script src="./scripts/ex3.js"></script>
     <script src="./scripts/ex4.js"></script>
     <script src="./scripts/ex5.js"></script>
+    <script src="./scripts/ex6.js"></script>
+    <script src="./scripts/ex7.js"></script>
     <script src="./scripts/app.js"></script>
 </body>
 </html>
