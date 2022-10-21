@@ -70,8 +70,8 @@ ul {
 }
 
 main {
-    /* width: 50%; */
     padding-top: 130px;
+    padding-bottom: 40px;
 }
 
 main ul li:not(:last-child){

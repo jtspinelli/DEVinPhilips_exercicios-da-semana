@@ -184,6 +184,66 @@
                     </div>
                 </div>
             </li>
+
+            <li id="ex5">
+                <div class="exercise-title" onclick="showExercise(event)">Ex 5 - Parâmetros Infinitos</div>
+
+                <div class="description hidden">
+                    <p>Para treinar os conceitos de Rest.</p>
+
+                    <p>
+                        Crie dois arquivos:<br>
+                        - <strong>index.html</strong><br>
+                        - <strong>app.js</strong>
+                    </p>
+
+                    <p>
+                        No arquivo <strong>apps.js</strong>, utilizando o operador <strong>Rest</strong>, crie uma função que receba como parâmetro uma 
+                        <strong>quantidade indefinida de variáveis</strong> inteiras (números inteiros).
+                    </p>
+
+                    <p>
+                        A função deve retornar a soma de todos os <strong>parâmetros</strong> (...).<br>
+                        Após executada a função, o resultado deve ser exibido no console.
+                    </p>
+
+                    <p class="blockquote"> Exemplo:</p>
+
+                    <pre>
+                        <span class="linenumbers">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </span>
+
+                        <code>const resultado = somaTudo(1, 2, 3, 4);<br>console.log(resultado);<br>// resultado deve ser 10</code>                        
+                    </pre>
+
+                    <p><strong>Obs.:</strong> Em <strong>index.html</strong> deve ser incluído o arquivo <strong>app.js</strong>, para rodar o script e executarmos a função.</p>
+
+                    <p class="blockquote" style="margin: 0;"> Dica:</p>
+
+                    <p class="blockquote"> 
+                        <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters" target="_blank">                          
+                            <span style="position: relative;">
+                                <img src="https://developer.mozilla.org/favicon-48x48.cbbd161b.png" alt="">
+                            </span>
+                            <span class="text">
+                                Parâmetros Rest - JavaScript | MDN
+                            </span>                          
+                        </a>
+                    </p>
+
+                    <hr>
+
+                    <p>Extra: Faça com uma arrow function.</p>
+                    
+                    <div class="exercise-buttons">
+                        <button class="code-button" onclick="showCode(5)">ver código</button>
+                        <button class="run-button" onclick="runExercise(event)">Rodar exercício</button>
+                    </div>
+                </div>
+            </li>
         </ul>
 
         <div class="code-container hidden-code">
@@ -204,6 +264,7 @@
     <script src="./scripts/ex2.js"></script>
     <script src="./scripts/ex3.js"></script>
     <script src="./scripts/ex4.js"></script>
+    <script src="./scripts/ex5.js"></script>
     <script src="./scripts/app.js"></script>
 </body>
 </html>
