@@ -2,7 +2,7 @@ function exercicio8() {
     alert("Este exercício aparece no console.")
     
     const uneDobraRetorna = (numArray,...numeros) => {
-        return numArray.concat(numeros.map(num => { return num * 2 }));
+        return [...numArray, numeros.map(num => { return num * 2 })];
     }
 
     console.log(`uneDobraRetorna([1,2,3], 4, 4): \n${uneDobraRetorna([1,2,3], 4, 4)}\n\n`);
