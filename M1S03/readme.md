@@ -3,7 +3,7 @@
 ![Afafa](images/dih.png)
 
 
- Este repositório contém os exercícios da <strong>Semana 02</strong> do curso <strong>DEVinHouse</strong>  edição <strong>Philips</strong>.
+ Este repositório contém os exercícios da <strong>Semana 03</strong> do curso <strong>DEVinHouse</strong>  edição <strong>Philips</strong>.
 
 ## It's LIVE: [IR PARA O APP](https://dih-philips-week-exercises.herokuapp.com/M1S03/index.html)
 
