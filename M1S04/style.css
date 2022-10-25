@@ -67,7 +67,6 @@ header img {
 }
 
 main {
-    /* background-color: rgb(252, 252, 252); */
     height: calc(100vh - var(--header-height));    
     border-left: 1px solid gainsboro;
     border-right: 1px solid gainsboro;
