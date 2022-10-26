@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --header-height: 80px;
+    --header-border-bottom-width: 1px;
+    --footer-height: 300px;
+    --footer-rights-height: 60px;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+}
+
+header {
+    height: var(--header-height);
+    padding: 10px 20px;
+    display: flex;     
+    z-index: 1;  
+    border-bottom: 1px solid transparent;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(var(--header-height) - var(--header-border-bottom-width)) ;
+    width: 100%;
+    background-color: rgb(250, 250, 250);
+    border-bottom: var(--header-border-bottom-width) solid gainsboro;
+    z-index: -1;
+}
+
+header img {
+    margin-right: 20px;
+}
+
+.logo-as-text {
+    display: flex;
+    align-items: center;
+}
+
+.logo-as-text h1 {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.logo-as-text h1 span:first-child {
+    color: #008080;
+}
+
+.logo-as-text h1 span:last-child {
+    color: #ff6600;
+    font-weight: 200;
+    font-size: 2.4rem;
+}
+
+.block-centered {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main {
+    min-height: calc(100vh - var(--header-height) - 200px);
+    border-left: 1px solid gainsboro;
+    border-right: 1px solid gainsboro;
+    padding-bottom: calc(var(--footer-height) + 20px);
+}
+
+footer {
+    height: var(--footer-height);
+    width: 100%;
+    background-color: #3b312a;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    color: white;
+}
+
+footer .block-centered {
+    padding: 0 20px;
+}
+
+.footer-rights {  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.footer-rights::before {
+    content: '';
+    background-color: #2e2621;
+    z-index: -1;
+}
+
+.footer-rights, .footer-rights::before {
+    height: var(--footer-rights-height);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.footer-rights h4 {
+    font-weight: 500;
+    font-size: .7rem;
+    color: #008080;
+    padding: 0 20px;
+}
+
+.footer-rights h4:first-child {
+    text-transform: uppercase;
+    border-right: 1px solid #008080;
+}
+
+footer .content {
+    height: 100%;
+}
+
+.footer-infos {
+    height: 100%;
+    position: relative;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-infos::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 0;
+    height: calc(22% - 20px);
+    width: 50%;
+    border-right: 1px solid #2e2621;
+}
+
+.footer-infos::after {
+    content: '';
+    position: absolute;
+    bottom: calc(var(--footer-rights-height) + 20px);
+    right: 0;
+    height: calc(22% - 20px);
+    width: 50%;
+    border-left: 1px solid #2e2621;
+}
+
+.footer-infos > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-infos .logo-as-text {
+    scale: .7;
+}
+
+.footer-socials {
+    padding: 20px 0;
+}
+
+.footer-socials ul {
+    list-style: none;
+    display: flex;
+}
+
+.footer-socials ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff6600;
+    width: 30px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    font-size: 110%;
+    color: #2e2621;
+    cursor: pointer;
+}
+
+.footer-socials ul li:not(:first-child) {
+    margin-left: 20px;
+}
+
+.footer-infos img {
+    width: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% - (var(--footer-rights-height) / 2)));
+    z-index: 2;
+}
+
+footer .contact {
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.836);
+}
+
+footer .contact h4 {
+    text-transform: uppercase;
+    font-weight: 400;    
+}
+
+footer .contact ul {
+    list-style: none;
+    font-size: .9rem;
+    font-weight: 200;
+}
+
+footer .contact ul li {
+    padding: 10px 0;
+    text-align: center;
+}
