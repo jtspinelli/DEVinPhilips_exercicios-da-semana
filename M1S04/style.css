@@ -71,8 +71,9 @@ header img {
 
 main {
     min-height: calc(100vh - var(--header-height) - 200px);
-    border-left: 1px solid gainsboro;
-    border-right: 1px solid gainsboro;
+    /* border-left: 1px solid gainsboro;
+    border-right: 1px solid gainsboro; */
+    padding: 20px;
     padding-bottom: calc(var(--footer-height) + 20px);
 }
 
@@ -224,4 +225,49 @@ footer .contact ul {
 footer .contact ul li {
     padding: 10px 0;
     text-align: center;
+}
+
+
+/* FORM STYLES: */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form .input-group {
+    position: relative;
+}
+
+form .input-group input {    
+    border: 1px solid gainsboro;
+    padding: 10px;
+    width: 200px;
+}
+
+form .input-group:not(:last-child), form button:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+form .input-group label {
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    background-color: white;
+    padding: 0 5px;
+    font-size: .9rem;
+}
+
+form button {
+    background-color: #ff6600;
+    border: none;
+    padding: 12px;
+    width: 200px;
+    display: block;
+    color: white;
+}
+
+form button:hover {
+    cursor: pointer;
+    background-color: #008080;
 }
