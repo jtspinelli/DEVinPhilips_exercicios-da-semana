@@ -7,7 +7,7 @@
     <title>DiH - M1S04 - Exercícios</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/3a51d99d0c.js" crossorigin="anonymous"></script>
-    <script src="app.js" defer type="module"></script>    
+    <script src="app.js" defer></script>    
 </head>
 <body>
     <header class="block-centered">
@@ -27,12 +27,12 @@
             
             <div class="input-group">
                 <label for="cpf">CPF</label>
-                <input type="text" name="cpf"> 
+                <input type="text" name="cpf" maxlength="14" onkeyup="cpfMask(event)"> 
             </div>   
 
             <div class="input-group">
                 <label for="phone">Celular</label>
-                <input type="text" name="phone"> 
+                <input type="tel" name="phone" maxlength="15" onchange="clearIfEmpty(event)" onkeyup="phoneMask(event)"> 
             </div>   
 
             <div class="input-group">
@@ -46,7 +46,7 @@
             </div> 
 
             <button type="submit">Enviar</button>
-            <button type="reset">Reset</button>
+            <button class="reset" type="reset">Limpar campos</button>
         </form>
     </main>
 

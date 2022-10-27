@@ -233,6 +233,7 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
 }
 
 form .input-group {
@@ -242,7 +243,7 @@ form .input-group {
 form .input-group input {    
     border: 1px solid gainsboro;
     padding: 10px;
-    width: 200px;
+    width: 250px;
 }
 
 form .input-group:not(:last-child), form button:not(:last-child) {
@@ -262,7 +263,7 @@ form button {
     background-color: #ff6600;
     border: none;
     padding: 12px;
-    width: 200px;
+    width: 250px;
     display: block;
     color: white;
 }
@@ -270,4 +271,12 @@ form button {
 form button:hover {
     cursor: pointer;
     background-color: #008080;
+}
+
+form button.reset {
+    background-color: #3b312a;
+}
+
+form button.reset:hover {
+    background-color: firebrick;
 }
