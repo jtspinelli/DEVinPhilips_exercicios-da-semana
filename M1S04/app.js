@@ -14,11 +14,11 @@ function criaConta(event) {
         cpf: getCpfUnmasked(event.target.cpf.value),
         celular: getPhoneUnmasked(event.target.phone.value),
         senha: event.target.password.value,
-        conta: Math.floor((Math.random() * 90000) + 1000),
+        conta: getRandomNumber(),
         saldo: 0
     }
 
-   contas.push(novaConta);  
+   salvaConta(novaConta);
 
    cadastroResetButton.click();
    desabilitaSubmitButton();
@@ -31,4 +31,12 @@ function criaConta(event) {
     </div>
    `
    toast.classList.toggle("hidden");
+}
+
+function getRandomNumber() {
+    return Math.floor((Math.random() * 90000) + 1000);
+}
+
+function salvaConta(conta) {
+    contas.push(conta);
 }
