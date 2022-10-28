@@ -1,3 +1,17 @@
+import {limpaValidationMessage, formularioVazio} from './form-cadastro-validations.js';
+
+const formInputCpf = document.getElementById("form-input-cpf");
+const formInputPhone = document.getElementById("form-input-phone");
+
+formInputCpf.addEventListener("keyup", cpfMask);
+
+formInputPhone.addEventListener("keyup", phoneMask);
+
+formInputPhone.addEventListener("change", (event) => {
+    clearIfEmpty(event);   
+    formularioVazio() ?  limpaValidationMessage() : "" 
+});
+
 function cpfMask(event) {
     event.target.value = event.target.value
     .replace(/\D/g, '') // Substitui caracteres não numericos por vazio
@@ -16,6 +30,14 @@ function phoneMask(event) {
         event.target.value = event.target.value
         .replace(/(\d{5})(\d)/, '$1-$2')
     }
+}
+
+export function getPhoneUnmasked(phone) {
+    return phone.replace("(", "").replace(")", "").replace("-", "").replace(" ", "");
+}
+
+export function getCpfUnmasked(cpf) {
+    return cpf.replaceAll(".", "").replace("-","");
 }
 
 function clearIfEmpty(event) {
