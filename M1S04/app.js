@@ -3,8 +3,26 @@ import {getPhoneUnmasked, getCpfUnmasked} from './input-masks.js'
 import {toast} from './toaster.js'
 
 let contas = [];
+const operationsLabels = document.getElementsByClassName("operations-label");
 
 formularioDeCadastro.addEventListener("submit", criaConta);
+
+for(let label of operationsLabels) {
+    label.addEventListener("click", selectOperation)
+}
+
+function selectOperation(event) {
+    const respectiveRadioButton = event.target.previousElementSibling
+    respectiveRadioButton.checked = true;
+
+    for(let label of operationsLabels) {
+        label.classList.remove("selected-option")
+        label.classList.add("not-selected-option")
+    }
+
+    event.target.classList.toggle("selected-option")
+    event.target.classList.remove("not-selected-option")
+}
 
 function criaConta(event) {
     event.preventDefault();
@@ -40,3 +58,4 @@ function getRandomNumber() {
 function salvaConta(conta) {
     contas.push(conta);
 }
+

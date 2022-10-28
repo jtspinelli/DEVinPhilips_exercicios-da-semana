@@ -34,6 +34,7 @@ for(let input of formularioDeCadastro.children) {
 
 cadastroResetButton.addEventListener("click", () => {
     limpaValidationMessage();
+    desabilitaSubmitButton();
 })
 
 function todosCamposPreenchidos() {

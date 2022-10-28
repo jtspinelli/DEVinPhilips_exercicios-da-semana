@@ -57,6 +57,45 @@
             
             <div id="toast" class="hidden"></div>
         </form>
+
+        <form id="form-servicos">
+            <div class="input-group radio">               
+                <input type="radio" name="option" value="1">   
+                <label class="operations-label" for="option">Saque</label>        
+            </div>
+
+            <div class="input-group radio">
+                <input type="radio" name="option" value="2"> 
+                <label class="operations-label" for="option">Depósito</label>                          
+            </div>
+
+            <div class="input-group radio">
+                <input type="radio" name="option" value="3">   
+                <label class="operations-label" for="option">Consulta Saldo</label>                        
+            </div>
+
+            <div class="input-group">
+                <label for="amount">Valor</label>
+                <input type="text" name="amount">
+            </div>
+
+            <div class="input-group">
+                <label for="account">Conta</label>
+                <input type="text" name="account">
+            </div>
+
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" name="password">
+            </div>
+
+            <button class="reset" type="reset">Limpar campos</button>
+
+            <div>
+                <button type="submit" disabled>Enviar</button>
+                <p></p>
+            </div>   
+        </form>
     </main>
 
     <footer>

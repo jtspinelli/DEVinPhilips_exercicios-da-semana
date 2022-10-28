@@ -75,6 +75,9 @@ main {
     border-right: 1px solid gainsboro; */
     padding: 20px;
     padding-bottom: calc(var(--footer-height) + 20px);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 footer {
@@ -234,6 +237,7 @@ form {
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    justify-content: center;
 }
 
 form .input-group {
@@ -352,4 +356,46 @@ form button.reset:hover {
 .semibold {
     font-weight: 500;
     font-size: 1rem;
+}
+
+#form-servicos input[type='radio'] {
+    width: unset;
+    display: none;
+}
+
+#form-servicos .radio {
+    display: flex;
+    width: 100%;
+}
+
+#form-servicos .radio label {
+    position: static;
+    border: 1px solid gainsboro;
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#form-servicos .radio label:hover {
+    background-color: #008080;
+    color: white;
+}
+
+#form-servicos .radio label.selected-option {
+    background-color: #ff6600;
+    border: 1px solid #ff6600;
+    color: white;
+}
+
+#form-servicos .radio label.selected-option:hover {
+    background-color: #ff6600;
+}
+
+#form-servicos .radio label.not-selected-option {
+    color: rgb(165, 165, 165);
+}
+
+#form-servicos .radio label.not-selected-option:hover {
+    color: white;
 }
