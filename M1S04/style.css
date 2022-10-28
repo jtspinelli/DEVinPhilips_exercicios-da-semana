@@ -71,8 +71,9 @@ header img {
 
 main {
     min-height: calc(100vh - var(--header-height) - 200px);
-    border-left: 1px solid gainsboro;
-    border-right: 1px solid gainsboro;
+    /* border-left: 1px solid gainsboro;
+    border-right: 1px solid gainsboro; */
+    padding: 20px;
     padding-bottom: calc(var(--footer-height) + 20px);
 }
 
@@ -224,4 +225,131 @@ footer .contact ul {
 footer .contact ul li {
     padding: 10px 0;
     text-align: center;
+}
+
+
+/* FORM STYLES: */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+form .input-group {
+    position: relative;
+}
+
+form .input-group input {    
+    border: 1px solid gainsboro;
+    padding: 10px;
+    width: 250px;
+}
+
+form .input-group:not(:last-child), form .reset {
+    margin-bottom: 20px;
+}
+
+form .input-group label {
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    background-color: white;
+    padding: 0 5px;
+    font-size: .9rem;
+}
+
+form button {
+    background-color: #ff6600;
+    border: none;
+    padding: 12px;
+    width: 250px;
+    display: block;
+    color: white;
+}
+
+form button[disabled] {
+    background-color: #8d8d8d;    
+}
+
+form button[disabled]:hover {
+    cursor: not-allowed;
+    background-color: #8d8d8d;  
+}
+
+form button:hover {
+    cursor: pointer;
+    background-color: #008080;
+}
+
+form button.reset {
+    background-color: #3b312a;
+}
+
+form button.reset:hover {
+    background-color: firebrick;
+}
+
+#submit-area {
+    position: relative;
+}
+
+#submit-area p {
+    color: red;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    font-size: .9rem;
+}
+
+#toast {
+    position: absolute;
+    border: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;    
+    z-index: 2;
+}
+
+#toast::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .5;
+    z-index: -1;
+}
+
+#toast div {
+    font-size: .9rem;
+    position: absolute;
+    color: white;
+    padding: 20px 50px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+.success {
+    background-color: green;
+}
+
+.hidden {
+    display: none;
+}
+
+.semibold {
+    font-weight: 500;
+    font-size: 1rem;
 }
