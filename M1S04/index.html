@@ -10,8 +10,10 @@
     <script src="./scripts/toaster.js" async type="module"></script>
     <script src="./scripts/input-masks.js" async type="module"></script>
     <script src="./scripts/form-cadastro-validations.js" async type="module"></script>
-    <script src="./scripts/seletor-servicos.js" async></script>
+    <script src="./scripts/seletor-servicos.js" async type="module"></script>
     <script src="./scripts/nova-conta.js" async type="module"></script>
+    <script src="./scripts/form-servicos-validations.js" async type="module"></script>
+    <script src="./scripts/servicos.js" async type="module"></script>
 </head>
 <body>
     <header class="block-centered">
@@ -92,13 +94,13 @@
 
                 <div class="input-group">
                     <label for="password">Senha</label>
-                    <input type="password" name="password">
+                    <input id="form-servicos-input-senha" type="password" name="password">
                 </div>
 
-                <button class="reset" type="reset">Limpar campos</button>
+                <button id="form-servicos-reset-btn" class="reset" type="reset">Limpar campos</button>
 
                 <div>
-                    <button type="submit" disabled>Enviar</button>
+                    <button id="form-servicos-submit-btn" type="submit" disabled>Enviar</button>
                     <p></p>
                 </div>   
             </div>

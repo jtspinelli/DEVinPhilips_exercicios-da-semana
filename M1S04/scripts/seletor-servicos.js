@@ -3,8 +3,9 @@
 // variáveis
 const formServicosContent = document.getElementById("form-servicos-content");
 const formServicosInputValor = document.getElementById("form-servicos-input-valor-area");
-const operationsLabels = document.getElementsByClassName("operations-label");
+export const operationsLabels = document.getElementsByClassName("operations-label");
 const operationsVoltarBtn = document.getElementById("voltar-btn");
+const formServicosResetBtn = document.getElementById("form-servicos-reset-btn");
 
 // eventos:
 for(let label of operationsLabels) {
@@ -23,6 +24,7 @@ function resetOptions(event) {
 
     setTimeout(() => {
         limpaOperacaoSelecionada();
+        formServicosResetBtn.click();
     },700)
 }
 
