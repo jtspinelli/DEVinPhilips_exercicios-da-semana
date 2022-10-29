@@ -2,6 +2,8 @@ import {limpaValidationMessage, formularioVazio} from './form-cadastro-validatio
 
 const formInputCpf = document.getElementById("form-input-cpf");
 const formInputPhone = document.getElementById("form-input-phone");
+const formServicosInputValor = document.getElementById("form-servicos-input-valor");
+
 
 formInputCpf.addEventListener("keyup", cpfMask);
 
@@ -11,6 +13,12 @@ formInputPhone.addEventListener("change", (event) => {
     clearIfEmpty(event);   
     formularioVazio() ?  limpaValidationMessage() : "" 
 });
+
+formServicosInputValor.addEventListener("keyup", currencyMask);
+
+formServicosInputValor.addEventListener("change", (event) => {
+    event.target.value ==='R$ 0,00' ? event.target.value = "" : "";
+})
 
 function cpfMask(event) {
     event.target.value = event.target.value
@@ -44,4 +52,33 @@ function clearIfEmpty(event) {
     if(event.target.value.length === 1) {
         event.target.value = "";
     }
+}
+
+function currencyMask(event) {
+    let input = event.target.value.replace("R$ ", "").replace("0,0", "").replace("0,","").replace(/\D/g, "");
+    let centavos = '00';
+    let inteiro = 0;
+
+    if(input.length === 1) {
+        centavos = `0${input}`;
+    } else if(input.length === 2) {
+        centavos = input;
+    } else if (input.length <= 5 && input.length > 0) {
+        centavos = input.slice(-2);
+        inteiro = input.substring(0, input.length - 2);
+    } else if(input.length > 0) {
+        centavos = input.replace(/(\d{2})$/, ",$1").slice(-2);
+        inteiro = input.replace(/(\d{2})$/, ",$1").split(",")[0];
+
+        if(inteiro.length <= 6) {
+            inteiro = inteiro.replace(/(\d)(\d{3})$/, '$1.$2');
+        } else {
+            inteiro = inteiro.replace(/(\d)(\d{3})$/, '$1.$2');
+
+            while(inteiro.match(/(\d)(\d{3}\.)/) !== null) {
+                inteiro = inteiro.replace(/(\d)(\d{3}\.)/, '$1.$2');
+            }
+        }
+    }
+    event.target.value = `R$ ${inteiro},${centavos}`;
 }
