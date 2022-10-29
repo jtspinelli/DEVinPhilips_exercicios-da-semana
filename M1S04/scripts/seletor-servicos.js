@@ -1,20 +1,16 @@
-// FORMULARIO DE SERVICOS:
-
-// variáveis
 const formServicosContent = document.getElementById("form-servicos-content");
 const formServicosInputValor = document.getElementById("form-servicos-input-valor-area");
+const formServicosInputSenha = document.getElementById("form-servicos-input-senha-area");
 export const operationsLabels = document.getElementsByClassName("operations-label");
 const operationsVoltarBtn = document.getElementById("voltar-btn");
 const formServicosResetBtn = document.getElementById("form-servicos-reset-btn");
 
-// eventos:
 for(let label of operationsLabels) {
     label.addEventListener("click", selectOperation)
 }
 
 operationsVoltarBtn.addEventListener("click", resetOptions)
 
-// funções:
 function resetOptions(event) {
     event.preventDefault();
     escondeVoltarBtn();
@@ -52,12 +48,25 @@ function mostraLabelSeletorDoServico(label) {
 
 function selectOperation(event) {
     operationIsConsultaSaldo(event) ? escondeInputValor() : mostraInputValor();
+    operationIsDeposito(event) ? escondeInputSenha() : mostraInputSenha();
     limpaOperacaoSelecionada();
     selecionaOpcaoClicada(event);  
 }
 
 function operationIsConsultaSaldo(event) {
     return event.target.innerText.toLowerCase() === 'consulta saldo';
+}
+
+function operationIsDeposito(event) {
+    return event.target.innerText.toLowerCase() === 'depósito';
+}
+
+function escondeInputSenha() {
+    formServicosInputSenha.classList.add("hidden");
+}
+
+function mostraInputSenha() {
+    formServicosInputSenha.classList.remove("hidden");
 }
 
 function escondeInputValor() {

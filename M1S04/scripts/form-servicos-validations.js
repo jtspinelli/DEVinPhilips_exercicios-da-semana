@@ -33,10 +33,20 @@ function contaEsenhaPreenchidos() {
     return formServicosInputConta.value.length > 0 && formServicosInputSenha.value.length > 0;
 }
 
+function contaPreenchida() {
+    return formServicosInputConta.value.length > 0;
+}
+
 function valorPreenchido() {
     return formServicosInputValor.value.length > 0 && formServicosInputValor.value !== 'R$ 0,00';
 }
 
 function todosCamposPreenchidos(incluirInputValor) {
-    return incluirInputValor ? contaEsenhaPreenchidos() && valorPreenchido() : contaEsenhaPreenchidos();
+    if(incluirInputValor && opcaoSelecionada() === 'saque') {
+        return contaEsenhaPreenchidos() && valorPreenchido();
+    } else if(incluirInputValor) {
+        return contaPreenchida() && valorPreenchido();
+    } else {
+        return contaEsenhaPreenchidos();
+    }
 }

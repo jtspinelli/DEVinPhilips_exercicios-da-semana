@@ -43,7 +43,7 @@ function mostrarErroDeAcesso() {
 function chamarServicoSelecionado(data) {
     switch(opcaoSelecionada()) {
         case 'saque':
-            saque(); 
+            saque(data.conta, data.valor); 
         break;
         case 'depósito':
             deposito(data.conta, data.valor);    
@@ -62,15 +62,47 @@ function contaNaoExiste(numeroDaConta) {
 }
 
 function senhaConfere(conta, senha) {
-    return getContas().filter(e => e.conta === conta)[0].senha === senha;
+    return opcaoSelecionada() === 'depósito' ? true : getContas().filter(e => e.conta === conta)[0].senha === senha;
 }
 
 function senhaNaoConfere(conta, senha) {
     return !senhaConfere(conta, senha);
 }
 
-function saque() {
+function saque(conta, valor) {
+    if(valor > 0) {
+        const titular = getContas().find(e => e.conta === conta).nome;
 
+        if(getSaldo(conta) > valor) {
+            getContas().find(e => e.conta === conta).saldo -= valor;
+
+            mostrarMensagem(`
+            <div class='success'>
+            <p>Saque realizado com sucesso!</p>
+            <p>Saldo atual da sua conta:</p>
+            <p class='semibold'>${getSaldo(conta)}</p>
+            <hr>
+            <p>Titular: ${titular}</p>
+            </div>
+            `);
+        } else {
+            mostrarMensagem(`
+            <div class='warning'>
+            <p>Saldo insuficiente.</p>
+            <p>Saldo atual da sua conta:</p>
+            <p class='semibold'>${getSaldo(conta)}</p>
+            <hr>
+            <p>Titular: ${titular}</p>
+            </div>
+            `);
+        }
+    } else {
+        mostrarMensagem(`
+        <div class='warning'>
+        <p>Valor de saque inválido.</p>
+        </div>
+        `);
+    }
 }
 
 function deposito(conta, valor) {
