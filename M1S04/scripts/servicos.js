@@ -1,6 +1,6 @@
 import {getContas} from './nova-conta.js';
 import {getCurrencyUnmasked, valueAsCurrency} from './input-masks.js';
-import {opcaoSelecionada} from './form-servicos-validations.js';
+import {opcaoSelecionada, limparFormulario} from './form-servicos-validations.js';
 import {toast, mostrarToast} from './toaster.js';
 
 const formServicos = document.getElementById("form-servicos");
@@ -73,7 +73,7 @@ function saque(conta, valor) {
     if(valor > 0) {
         const titular = getContas().find(e => e.conta === conta).nome;
 
-        if(getSaldo(conta) > valor) {
+        if(getCurrencyUnmasked(getSaldo(conta)) > valor) {
             getContas().find(e => e.conta === conta).saldo -= valor;
 
             mostrarMensagem(`
@@ -85,6 +85,8 @@ function saque(conta, valor) {
             <p>Titular: ${titular}</p>
             </div>
             `);
+
+            limparFormulario();
         } else {
             mostrarMensagem(`
             <div class='warning'>
@@ -102,7 +104,7 @@ function saque(conta, valor) {
         <p>Valor de saque inválido.</p>
         </div>
         `);
-    }
+    } 
 }
 
 function deposito(conta, valor) {
@@ -120,6 +122,8 @@ function deposito(conta, valor) {
         <p>Titular: ${titular}</p>
         </div>
         `);
+
+        limparFormulario();
     } else {
         mostrarMensagem(`
         <div class='warning'>
@@ -139,6 +143,8 @@ function consultaSaldo(conta) {
     <p>Titular: ${titular}</p>
     </div>
     `);
+
+    limparFormulario();
 }
 
 function getSaldo(conta) {

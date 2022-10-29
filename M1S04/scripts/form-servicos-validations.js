@@ -21,6 +21,10 @@ export function opcaoSelecionada() {
     return document.querySelector(".operations-label.selected-option").textContent.toLowerCase();
 }
 
+export function limparFormulario() {
+    formServicosResetBtn.click();
+}
+
 function habilitaSubmitButton() {
     formServicosSubmitBtn.disabled = false;
 }
