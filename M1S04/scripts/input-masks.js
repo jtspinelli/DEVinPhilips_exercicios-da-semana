@@ -3,6 +3,7 @@ import {limpaValidationMessage, formularioVazio} from './form-cadastro-validatio
 const formInputCpf = document.getElementById("form-input-cpf");
 const formInputPhone = document.getElementById("form-input-phone");
 const formServicosInputValor = document.getElementById("form-servicos-input-valor");
+const formServicosInputConta = document.getElementById("form-servicos-input-conta");
 
 
 formInputCpf.addEventListener("keyup", cpfMask);
@@ -19,6 +20,8 @@ formServicosInputValor.addEventListener("keyup", currencyMask);
 formServicosInputValor.addEventListener("change", (event) => {
     event.target.value ==='R$ 0,00' ? event.target.value = "" : "";
 })
+
+formServicosInputConta.addEventListener("keyup", numberMask);
 
 function cpfMask(event) {
     event.target.value = event.target.value
@@ -81,4 +84,8 @@ function currencyMask(event) {
         }
     }
     event.target.value = `R$ ${inteiro},${centavos}`;
+}
+
+function numberMask(event) {
+    event.target.value = event.target.value.replace(/\D/g, "");
 }
