@@ -354,6 +354,10 @@ form button.reset:hover {
     background-color: green;
 }
 
+.warning {
+    background-color: firebrick;
+}
+
 .hidden {
     display: none;
 }

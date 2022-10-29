@@ -3,9 +3,13 @@ import {getPhoneUnmasked, getCpfUnmasked} from './input-masks.js'
 import {toast} from './toaster.js'
 
 
-export let contas = [];
+let contas = [];
 
 formularioDeCadastro.addEventListener("submit", criaConta);
+
+export function getContas() {
+    return contas;
+}
 
 function criaConta(event) {
     event.preventDefault();

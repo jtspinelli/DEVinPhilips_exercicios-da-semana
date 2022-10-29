@@ -51,6 +51,10 @@ export function getCpfUnmasked(cpf) {
     return cpf.replaceAll(".", "").replace("-","");
 }
 
+export function getCurrencyUnmasked(currency) {
+    return parseInt(currency.replace(",", "").replace("R$ ", "").replace(/^0{1,2}/, ""));
+}
+
 function clearIfEmpty(event) {
     if(event.target.value.length === 1) {
         event.target.value = "";

@@ -6,6 +6,10 @@ toast.addEventListener("click", (event) => {
     }
 })
 
+export function mostrarToast() {
+    toast.classList.toggle("hidden");
+}
+
 function outsideClick(event) {
     return event.target.id == 'toast';
 }

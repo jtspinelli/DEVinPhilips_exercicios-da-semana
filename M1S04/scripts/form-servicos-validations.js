@@ -17,7 +17,7 @@ formServicos.addEventListener("keyup", () => {
 
 formServicosResetBtn.addEventListener("click", desabilitaSubmitButton);
 
-function opcaoSelecionada() {
+export function opcaoSelecionada() {
     return document.querySelector(".operations-label.selected-option").textContent.toLowerCase();
 }
 
