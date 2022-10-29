@@ -2,7 +2,7 @@
 
 // variáveis
 const formServicosContent = document.getElementById("form-servicos-content");
-const formServicosInputValor = document.getElementById("form-servicos-input-valor");
+const formServicosInputValor = document.getElementById("form-servicos-input-valor-area");
 const operationsLabels = document.getElementsByClassName("operations-label");
 const operationsVoltarBtn = document.getElementById("voltar-btn");
 
