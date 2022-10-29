@@ -13,7 +13,6 @@ operationsVoltarBtn.addEventListener("click", resetOptions)
 
 function resetOptions(event) {
     event.preventDefault();
-    console.log("OEEEEEEEEEEE");
     escondeVoltarBtn();
     escondeFormularioDeServicos();
 
