@@ -21,20 +21,23 @@ function verificarContaSenha(event) {
     }
 
     if(contaNaoExiste(data.conta) || senhaNaoConfere(data.conta, data.senha)) {
-        mostrarErro();
+        mostrarErroDeAcesso();
     }
 }
 
-function mostrarErro() {
-    toast.innerHTML = `
+function mostrarMensagem(mensagem) {
+    toast.innerHTML = mensagem;
+    mostrarToast();
+}
+
+function mostrarErroDeAcesso() {
+    mostrarMensagem(`
     <div class='warning'>
     <p>Conta não encontrada</p>
     <p>ou</p>
     <p>senha incorreta</p>
     </div>
-    `;
-
-    mostrarToast();
+    `);
 }
 
 function chamarServicoSelecionado(data) {
@@ -43,7 +46,7 @@ function chamarServicoSelecionado(data) {
             saque(); 
         break;
         case 'depósito':
-            deposito();    
+            deposito(data.conta, data.valor);    
         break;
         default:
             consultaSaldo(data.conta);
@@ -70,22 +73,42 @@ function saque() {
 
 }
 
-function deposito() {
+function deposito(conta, valor) {
+    if(valor > 0) {
+        const titular = getContas().find(e => e.conta === conta).nome;
 
+        getContas().find(e => e.conta === conta).saldo += valor;
+
+        mostrarMensagem(`
+        <div class='success'>
+        <p>Depósito realizado com sucesso!</p>
+        <p>Saldo atual da sua conta:</p>
+        <p class='semibold'>${getSaldo(conta)}</p>
+        <hr>
+        <p>Titular: ${titular}</p>
+        </div>
+        `);
+    } else {
+        mostrarMensagem(`
+        <div class='warning'>
+        <p>Valor de depósito inválido.</p>
+        </div>
+        `);
+    }
 }
 
 function consultaSaldo(conta) {
     const titular = getContas().find(e => e.conta === conta).nome;
-    const saldo = valueAsCurrency(getContas().find(e => e.conta === conta).saldo);
 
-    toast.innerHTML = `
-    <div class='info'>
+    mostrarMensagem(`<div class='info'>
     <p>Saldo atual da sua conta:</p>
-    <p class='semibold'>${saldo}</p>
+    <p class='semibold'>${getSaldo(conta)}</p>
     <hr>
     <p>Titular: ${titular}</p>
     </div>
-    `;
+    `);
+}
 
-    mostrarToast();
+function getSaldo(conta) {
+    return valueAsCurrency(getContas().find(e => e.conta === conta).saldo);
 }
