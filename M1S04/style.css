@@ -70,11 +70,15 @@ header img {
 }
 
 main {
-    min-height: calc(100vh - var(--header-height) - 200px);
+    /* min-height: calc(100vh - var(--header-height) - 200px); */
+    min-height: calc(100vh - var(--header-height));
     /* border-left: 1px solid gainsboro;
     border-right: 1px solid gainsboro; */
     padding: 20px;
     padding-bottom: calc(var(--footer-height) + 20px);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 footer {
@@ -234,6 +238,11 @@ form {
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    justify-content: center;
+}
+
+#form-cadastro {
+    justify-content: unset;
 }
 
 form .input-group {
@@ -345,6 +354,21 @@ form button.reset:hover {
     background-color: green;
 }
 
+.warning {
+    background-color: firebrick;
+}
+
+.info {
+    background-color: #3b312a;
+}
+
+.info hr {
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background-color: #ff6600;
+}
+
 .hidden {
     display: none;
 }
@@ -352,4 +376,84 @@ form button.reset:hover {
 .semibold {
     font-weight: 500;
     font-size: 1rem;
+}
+
+#form-servicos {
+    justify-content: flex-start;
+}
+
+#form-servicos input[type='radio'] {
+    width: unset;
+    display: none;
+}
+
+#form-servicos .radio {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    height: 40px;
+    transition: 400ms;
+    transition-property: height;
+}
+
+#form-servicos .radio label {
+    position: static;
+    border: 1px solid #ff6600;
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#form-servicos .radio label:hover {
+    background-color: #008080;
+    color: white;
+}
+
+#form-servicos .radio label.selected-option {
+    background-color: #ff6600;
+    border: 1px solid #ff6600;
+    color: white;
+}
+
+#form-servicos .fade-up {
+    height: 0;
+    transition: 400ms;
+    margin: 0;
+    padding: 0;
+}
+
+#voltar-btn {
+    background-color: #008080;
+    margin-bottom: 10px;
+    height: 40px;
+    transition: 200ms;
+    transition-property: opacity;
+    overflow: hidden;
+}
+
+#voltar-btn.hidden-by-opacity {
+    cursor: unset;
+}
+
+.hidden-by-opacity {
+    opacity: 0;
+    transition: 500ms;
+}
+
+#form-servicos-content {
+    overflow: hidden;
+    padding-top: 5px;
+    height: 275px;
+    transition: 400ms;
+    transition-property: height;
+}
+
+#form-servicos .input-group:not(.fade-up) {
+    margin-bottom: 20px;
+}
+
+#form-servicos-select {
+    width: 100%;
+    margin-bottom: 20px;
 }

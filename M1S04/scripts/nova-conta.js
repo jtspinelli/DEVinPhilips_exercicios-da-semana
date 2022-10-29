@@ -2,9 +2,14 @@ import {formularioDeCadastro, cadastroResetButton, desabilitaSubmitButton} from 
 import {getPhoneUnmasked, getCpfUnmasked} from './input-masks.js'
 import {toast} from './toaster.js'
 
+
 let contas = [];
 
 formularioDeCadastro.addEventListener("submit", criaConta);
+
+export function getContas() {
+    return contas;
+}
 
 function criaConta(event) {
     event.preventDefault();
