@@ -412,9 +412,13 @@ form button.reset:hover {
     background-color: #008080;
     margin-bottom: 10px;
     height: 40px;
-    transition: 400ms;
-    transition-property: height;
+    transition: 200ms;
+    transition-property: opacity;
     overflow: hidden;
+}
+
+#voltar-btn.hidden-by-opacity {
+    cursor: unset;
 }
 
 .hidden-by-opacity {
@@ -431,5 +435,10 @@ form button.reset:hover {
 }
 
 #form-servicos .input-group:not(.fade-up) {
+    margin-bottom: 20px;
+}
+
+#form-servicos-select {
+    width: 100%;
     margin-bottom: 20px;
 }

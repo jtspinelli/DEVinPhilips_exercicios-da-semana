@@ -3,39 +3,72 @@ import {getPhoneUnmasked, getCpfUnmasked} from './input-masks.js'
 import {toast} from './toaster.js'
 
 let contas = [];
-const operations = document.getElementsByClassName("radio");
+
+// OPERATIONS:
 const operationsLabels = document.getElementsByClassName("operations-label");
+const operationsVoltarBtn = document.getElementById("voltar-btn");
+
+// FORMULARIO DE SERVICOS:
+const formServicosContent = document.getElementById("form-servicos-content");
 const formServicosInputValor = document.getElementById("form-servicos-input-valor");
 
-const servicosSaque = document.getElementById("servicos-saque");
-const servicosDeposito = document.getElementById("servicos-deposito");
-const servicosSaldo = document.getElementById("servicos-saldo");
 
+// EVENTOS:
 formularioDeCadastro.addEventListener("submit", criaConta);
 
 for(let label of operationsLabels) {
     label.addEventListener("click", selectOperation)
 }
 
-document.getElementById("voltar-btn").addEventListener("click", (event) => {
+operationsVoltarBtn.addEventListener("click", (event) => {
     event.preventDefault();
-    for(let i = 0; i < operations.length; i++) {
-        if(operations[i].children[1].classList.value.includes("not-selected")) {
-            
-            document.getElementById("voltar-btn").classList.add("hidden-by-opacity")
-            document.getElementById("form-servicos-content").classList.add("fade-up")
+    escondeVoltarBtn();
+    escondeFormularioDeServicos();
 
-            setTimeout(() => {
-                operations[i].classList.remove("fade-up")
-                setTimeout(() => {
-                    limpaOperacaoSelecionada();
-                },350)
-            }, 400)
+    mostrarOperacoesEscondidas();
 
-            
-        }
-    }
+    setTimeout(() => {
+        limpaOperacaoSelecionada();
+    },700)
 })
+
+
+
+// FUNÇÕES:
+
+function mostrarOperacoesEscondidas() {
+    setTimeout(() => {
+        for(let label of operationsLabels) {
+            if(isNotSelectedOption(label)) {
+                mostraLabelSeletorDoServico(label);
+            }
+        }
+    }, 400);
+}
+
+function mostraLabelSeletorDoServico(label) {
+    label.parentElement.classList.remove("fade-up");
+}
+
+function escondeFormularioDeServicos() {
+    formServicosContent.classList.add("fade-up");
+}
+
+function mostraFormularioDeServicos() {
+    formServicosContent.classList.remove("fade-up");
+}
+
+function escondeVoltarBtn() {
+    operationsVoltarBtn.classList.add("hidden-by-opacity");
+}
+
+function mostraVoltarBtn() {
+    operationsVoltarBtn.classList.remove("hidden-by-opacity");
+}
+
+function isNotSelectedOption(label) {
+    return label.classList.value.includes("not-selected");
+}
 
 function selectOperation(event) {
     operationIsConsultaSaldo(event) ? escondeInputValor() : mostraInputValor();
@@ -47,25 +80,36 @@ function selecionaOpcaoClicada(event) {
     const respectiveRadioButton = event.target.previousElementSibling
     respectiveRadioButton.checked = true;
 
-    event.target.classList.add("selected-option")
-    event.target.classList.remove("not-selected-option")
+    mostraVoltarBtn();
+    marcarLabelComoSelecionado(event);
+    esconderOpcoesNaoSelecionadas();
 
-    for(let i = 0; i < operations.length; i++) {
-        if(operations[i].children[1].classList.value.includes("not-selected")) {
-            operations[i].classList.add("fade-up")
-            document.getElementById("voltar-btn").classList.remove("hidden-by-opacity")
-            setTimeout(() => {
-                document.getElementById("form-servicos-content").classList.remove("fade-up")
-            }, 300)
-            
+    setTimeout(() => {
+        mostraFormularioDeServicos();
+    }, 300)
+}
+
+function esconderOpcoesNaoSelecionadas() {
+    for(let label of operationsLabels) {
+        if(isNotSelectedOption(label)) {
+            escondeLabelSeletorDoServico(label);
         }
     }
 }
 
+function escondeLabelSeletorDoServico(label) {
+    label.parentElement.classList.add("fade-up")
+}
+
+function marcarLabelComoSelecionado(event) {
+    event.target.classList.add("selected-option");
+    event.target.classList.remove("not-selected-option");
+}
+
 function limpaOperacaoSelecionada() {
     for(let label of operationsLabels) {
-        label.classList.remove("selected-option")
-        label.classList.add("not-selected-option")
+        label.classList.remove("selected-option");
+        label.classList.add("not-selected-option");
     }
 }
 
