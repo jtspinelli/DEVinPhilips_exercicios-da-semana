@@ -114,7 +114,7 @@ function deposito(conta, valor) {
         mostrarMensagem(`
         <div class='success'>
         <p>Depósito realizado com sucesso!</p>
-        <p>Saldo atual da sua conta:</p>
+        <p>Saldo atual da conta:</p>
         <p class='semibold'>${getSaldo(conta)}</p>
         <hr>
         <p>Titular: ${titular}</p>
