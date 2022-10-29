@@ -55,7 +55,7 @@ function clearIfEmpty(event) {
 }
 
 function currencyMask(event) {
-    let input = event.target.value.replace("R$ ", "").replace("0,0", "").replace("0,","").replace(/\D/g, "");
+    let input = event.target.value.replace("R$ ", "").replace(/^(0,0)/, "").replace(/^(0,)/,"").replace(/\D/g, "");
     let centavos = '00';
     let inteiro = 0;
 
