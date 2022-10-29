@@ -52,7 +52,7 @@ export function getCpfUnmasked(cpf) {
 }
 
 export function getCurrencyUnmasked(currency) {
-    return parseInt(currency.replace(",", "").replace("R$ ", "").replace(/^0{1,2}/, ""));
+    return parseInt(currency.replace(",", "").replaceAll(".", "").replace("R$ ", "").replace(/^0{1,2}/, ""));
 }
 
 function clearIfEmpty(event) {
