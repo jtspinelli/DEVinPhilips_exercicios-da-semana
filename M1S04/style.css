@@ -70,7 +70,8 @@ header img {
 }
 
 main {
-    min-height: calc(100vh - var(--header-height) - 200px);
+    /* min-height: calc(100vh - var(--header-height) - 200px); */
+    min-height: calc(100vh - var(--header-height));
     /* border-left: 1px solid gainsboro;
     border-right: 1px solid gainsboro; */
     padding: 20px;
@@ -240,6 +241,10 @@ form {
     justify-content: center;
 }
 
+#form-cadastro {
+    justify-content: unset;
+}
+
 form .input-group {
     position: relative;
 }
@@ -358,6 +363,10 @@ form button.reset:hover {
     font-size: 1rem;
 }
 
+#form-servicos {
+    justify-content: flex-start;
+}
+
 #form-servicos input[type='radio'] {
     width: unset;
     display: none;
@@ -366,11 +375,15 @@ form button.reset:hover {
 #form-servicos .radio {
     display: flex;
     width: 100%;
+    overflow: hidden;
+    height: 40px;
+    transition: 400ms;
+    transition-property: height;
 }
 
 #form-servicos .radio label {
     position: static;
-    border: 1px solid gainsboro;
+    border: 1px solid #ff6600;
     width: 100%;
     padding: 10px 20px;
     text-align: center;
@@ -388,14 +401,35 @@ form button.reset:hover {
     color: white;
 }
 
-#form-servicos .radio label.selected-option:hover {
-    background-color: #ff6600;
+#form-servicos .fade-up {
+    height: 0;
+    transition: 400ms;
+    margin: 0;
+    padding: 0;
 }
 
-#form-servicos .radio label.not-selected-option {
-    color: rgb(165, 165, 165);
+#voltar-btn {
+    background-color: #008080;
+    margin-bottom: 10px;
+    height: 40px;
+    transition: 400ms;
+    transition-property: height;
+    overflow: hidden;
 }
 
-#form-servicos .radio label.not-selected-option:hover {
-    color: white;
+.hidden-by-opacity {
+    opacity: 0;
+    transition: 500ms;
+}
+
+#form-servicos-content {
+    overflow: hidden;
+    padding-top: 5px;
+    height: 275px;
+    transition: 400ms;
+    transition-property: height;
+}
+
+#form-servicos .input-group:not(.fade-up) {
+    margin-bottom: 20px;
 }
