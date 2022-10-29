@@ -62,20 +62,24 @@ function clearIfEmpty(event) {
 }
 
 function currencyMask(event) {
-    let input = event.target.value.replace("R$ ", "").replace(/^(0,0)/, "").replace(/^(0,)/,"").replace(/\D/g, "");
+    event.target.value = valueAsCurrency(event.target.value);
+}
+
+export function valueAsCurrency(value) {
+    value = value.toString().replace("R$ ", "").replace(/^(0,0)/, "").replace(/^(0,)/,"").replace(/\D/g, "");
     let centavos = '00';
     let inteiro = 0;
 
-    if(input.length === 1) {
-        centavos = `0${input}`;
-    } else if(input.length === 2) {
-        centavos = input;
-    } else if (input.length <= 5 && input.length > 0) {
-        centavos = input.slice(-2);
-        inteiro = input.substring(0, input.length - 2);
-    } else if(input.length > 0) {
-        centavos = input.replace(/(\d{2})$/, ",$1").slice(-2);
-        inteiro = input.replace(/(\d{2})$/, ",$1").split(",")[0];
+    if(value.length === 1) {
+        centavos = `0${value}`;
+    } else if(value.length === 2) {
+        centavos = value;
+    } else if (value.length <= 5 && value.length > 0) {
+        centavos = value.slice(-2);
+        inteiro = value.substring(0, value.length - 2);
+    } else if(value.length > 0) {
+        centavos = value.replace(/(\d{2})$/, ",$1").slice(-2);
+        inteiro = value.replace(/(\d{2})$/, ",$1").split(",")[0];
 
         if(inteiro.length <= 6) {
             inteiro = inteiro.replace(/(\d)(\d{3})$/, '$1.$2');
@@ -87,7 +91,7 @@ function currencyMask(event) {
             }
         }
     }
-    event.target.value = `R$ ${inteiro},${centavos}`;
+    return `R$ ${inteiro},${centavos}`;
 }
 
 function numberMask(event) {

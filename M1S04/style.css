@@ -358,6 +358,17 @@ form button.reset:hover {
     background-color: firebrick;
 }
 
+.info {
+    background-color: #3b312a;
+}
+
+.info hr {
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background-color: #ff6600;
+}
+
 .hidden {
     display: none;
 }

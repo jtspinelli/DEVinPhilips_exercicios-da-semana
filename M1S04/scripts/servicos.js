@@ -1,5 +1,5 @@
 import {getContas} from './nova-conta.js';
-import {getCurrencyUnmasked} from './input-masks.js';
+import {getCurrencyUnmasked, valueAsCurrency} from './input-masks.js';
 import {opcaoSelecionada} from './form-servicos-validations.js';
 import {toast, mostrarToast} from './toaster.js';
 
@@ -17,7 +17,7 @@ function verificarContaSenha(event) {
     }
 
     if(contaExiste(data.conta) && senhaConfere(data.conta, data.senha)) {
-        chamarServicoSelecionado();
+        chamarServicoSelecionado(data);
     }
 
     if(contaNaoExiste(data.conta) || senhaNaoConfere(data.conta, data.senha)) {
@@ -37,7 +37,7 @@ function mostrarErro() {
     mostrarToast();
 }
 
-function chamarServicoSelecionado() {
+function chamarServicoSelecionado(data) {
     switch(opcaoSelecionada()) {
         case 'saque':
             saque(); 
@@ -46,7 +46,7 @@ function chamarServicoSelecionado() {
             deposito();    
         break;
         default:
-            consultaSaldo();
+            consultaSaldo(data.conta);
     }
 }
 
@@ -74,6 +74,18 @@ function deposito() {
 
 }
 
-function consultaSaldo() {
+function consultaSaldo(conta) {
+    const titular = getContas().find(e => e.conta === conta).nome;
+    const saldo = valueAsCurrency(getContas().find(e => e.conta === conta).saldo);
 
+    toast.innerHTML = `
+    <div class='info'>
+    <p>Saldo atual da sua conta:</p>
+    <p class='semibold'>${saldo}</p>
+    <hr>
+    <p>Titular: ${titular}</p>
+    </div>
+    `;
+
+    mostrarToast();
 }
