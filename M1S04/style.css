@@ -241,6 +241,11 @@ form {
     justify-content: center;
 }
 
+form h1 {
+    color: #ff6600;
+    margin-bottom: 35px;
+}
+
 #form-cadastro {
     justify-content: unset;
 }
