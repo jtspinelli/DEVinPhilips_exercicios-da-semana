@@ -385,6 +385,7 @@ form button.reset:hover {
 
 #form-servicos {
     justify-content: flex-start;
+    min-height: 530px;
 }
 
 #form-servicos input[type='radio'] {
