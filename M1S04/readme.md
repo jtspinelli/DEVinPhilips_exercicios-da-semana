@@ -1,4 +1,4 @@
-# DEVin[Philips] - M1S03: Exercícios da Semana 04
+# DEVin[Philips] - M1S04: Exercícios da Semana 04
 
 ![Afafa](../images/dih.png)
 
