@@ -1,6 +1,9 @@
 import Funcionario from './Funcionario.js';
-import Fatura from './Fatura.js';
 import validaCpf from './cpf.js';
+import Fatura from './Fatura.js';
+import Personagem from './Personagem.js';
+import {Cachorro, Gato} from './Animal.js'
+
 
 window.ex1 = () => {
     const jonathan = new Funcionario('Jonathan Spinelli', '01857203070', 1000);
@@ -22,3 +25,24 @@ window.ex2 = () => {
     console.log(fatura.valorTotal); 
 }
 
+window.ex3 = () => {
+    const jonathan = new Personagem("Jonathan");
+
+    jonathan.sofreuDano(15);
+    jonathan.usouKitMedico();
+    jonathan.usouKitMedico();
+    jonathan.sofreuDano(30);
+    jonathan.sofreuDano(49);
+    jonathan.usouKitMedico();
+    jonathan.sofreuDano(50);
+
+    console.log(jonathan)
+}
+
+window.ex4 = () => {
+    const loiro = new Gato('Tulico', 8);
+    const luna = new Cachorro('Luna Caramela', 7)
+
+    console.log(loiro.som);
+    console.log(luna.som);
+}
