@@ -1,32 +1,11 @@
-import {Cachorro, Gato} from './Animal.js'
-import CalculadoraDeArea from './CalculadoraDeArea.js'
+
 import Juros from './Juros.js';
 import Time from './Time.js';
 import Partida from './Partida.js';
 import Usuario from './Usuario.js';
 
-window.ex3 = () => {
-
-}
-
-window.ex4 = () => {
-    const loiro = new Gato('Tulico', 8);
-    const luna = new Cachorro('Luna Caramela', 7)
-
-    console.log(loiro.som);
-    console.log(luna.som);
-}
-
 window.ex5 = () => {
-    const triangulo = new CalculadoraDeArea('triangulo', 6, 8);
-    const areaDoTriangulo = triangulo.calcular();
-    const quadrado = new CalculadoraDeArea('quadrado', 4, 4);
-    const areaDoQuadrado = quadrado.calcular();
-    const retangulo = new CalculadoraDeArea('retangulo', 4, 6);
-    const areaDoRetangulo = retangulo.calcular();
-    console.log(areaDoTriangulo);
-    console.log(areaDoQuadrado);
-    console.log(areaDoRetangulo);
+
 }
 
 window.ex6 = () => {

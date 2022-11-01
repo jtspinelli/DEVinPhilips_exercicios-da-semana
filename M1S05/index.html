@@ -13,6 +13,8 @@
     <script src="./scripts/ex1.js" type="module"></script>
     <script src="./scripts/ex2.js" type="module"></script>
     <script src="./scripts/ex3.js" type="module"></script>
+    <script src="./scripts/ex4.js" type="module"></script>
+    <script src="./scripts/ex5.js" type="module"></script>
     <script src="./app.js" async type="module"></script>
 </head>
 <body>
@@ -154,6 +156,87 @@
                             <i></i>
                         </span>
                         <code>const alyx = new Personagem("Alyx");<br><br>console.log(alyx.percentualVida); // 100<br><br>alyx.sofreuDano(50);<br><br>console.log(alyx.percentualVida); // 50<br><br>alyx.usouKitMedico();<br><br>console.log(alyx.percentualVida); // 60</code>                        
+                    </pre> 
+
+                    <div class="exercise-buttons">
+                        <button class="code-button">ver código</button>
+                        <button class="run-button">Rodar exercício</button>
+                    </div>
+                </div>
+            </li>
+
+            <li id="ex4">
+                <div class="exercise-title">Ex 4 - Subclasses Animal</div>
+
+                <div class="description hidden">
+                    <p>Em três arquivos (<code>index.html</code>, <code>app.js</code>, <code>Fatura.js</code>) resolva o seguinte exercício:</p>
+                
+                    <p>Inclua o arquivo <code>app.js</code> em <code>index.html</code> como <code>type="module"</code>.</p>
+                
+                    <p>No arquivo <code>Animal.js</code>, crie a classe <strong>Animal</strong> com os atributos <code>nome</code>, <code>idade</code> e <code>som</code>.</p>
+                
+                    <p>Depois crie as subclasses (de <strong>Animal</strong>) <strong>Cachorro</strong> e <strong>Gato</strong> com os atributos <code>nome</code> e <code>idade</code>, inicializando o atributo <code>som</code> da superclasse com <code>"latido"</code> e <code>"miado"</code>, respectivamente e exporte ambas com <code>export</code> comuns.</p>
+               
+                    <p>Importe as classes <code>Cahorro</code> e <code>Gato</code> para <code>app.js</code>, crie uma instância de cada subclasse para testar, conforme abaixo.</p>
+                
+                    <p>Exemplos:</p>
+
+                    <pre>
+                        <span class="linenumbers">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </span>
+                        <code>const snoopy = new Cachorro('snoopy', 10);<br>console.log( snoopy.som );   // "latido" <br>const frajola = new Gato('frajola', 8);<br>console.log( frajola.som );   // "miado"</code>                        
+                    </pre> 
+
+                    <div class="exercise-buttons">
+                        <button class="code-button">ver código</button>
+                        <button class="run-button">Rodar exercício</button>
+                    </div>
+                </div>
+            </li>
+
+            <li id="ex5">
+                <div class="exercise-title">Ex 5 -  Classe Área</div>
+
+                <div class="description hidden">
+                    <p>Em três arquivos (<code>index.html</code>, <code>app.js</code>, <code>Fatura.js</code>) resolva o seguinte exercício:</p>
+                
+                    <p>Inclua o arquivo <code>app.js</code> em <code>index.html</code> como <code>type="module"</code>.</p>
+               
+                    <p>Em <code>CalculadoraDeArea.js</code>, crie uma classe <strong>CalculadoraDeArea</strong> que tenha os atributos <code>tipo</code> (<em>string</em>), <code>base</code> (<em>number</em>) e <code>altura</code> (<em>number</em>).</p>
+                
+                    <p>Implemente o método <code>calcular()</code> que faça o cálculo da área conforme o <code>tipo</code> do polígono informado:</p>
+                
+                    <p>
+                        <ul>                        
+                            <li><span>"triangulo": <code>(base * altura) / 2</code></span></li>
+                            <li><span>"quadrado" e "retangulo" : <code>base * altura</code></span></li>
+                        </ul>
+                    </p>                   
+
+                    <p>
+                        Importe a classe <code>CalculadoraDeArea</code> em <code>app.js</code> e teste a implementação com instâncias dessa classe para 
+                        um triângulo de base 6 cm e altura 8 cm, para um quadrado de base e altura de 4 cm e um retângulo de base 4 cm e altura 6 cm.
+                    </p>
+
+                    <p>Imprima o resultado calculado no console.</p>
+
+                    <p>Exemplos:</p>
+
+                    <pre>
+                        <span class="linenumbers">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </span>
+                        <code>const quadA = new CalculadoraDeArea("quadrado", 6, 6);<br>const areaQA = quadA.calcular();<br>console.log(areaQA); // 36<br><br>const triangB = new CalculadoraDeArea("triangulo", 8, 7);<br>const areaTB = triangB.calcular();<br>console.log(areaTB); // 28</code>                        
                     </pre> 
 
                     <div class="exercise-buttons">
