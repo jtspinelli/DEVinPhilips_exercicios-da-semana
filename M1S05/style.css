@@ -1,0 +1,25 @@
+li ul li {
+    font-size: 13px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+p code, li ul li code {
+    background-color: #091e4214;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+}
+
+li ul {
+    list-style: disc;
+    list-style-position: inside;
+}
+
+li ul li {
+    line-height: 20px;
+}
+
+li ul li span {
+    margin-left: -7px;
+}

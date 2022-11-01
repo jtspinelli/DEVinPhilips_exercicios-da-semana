@@ -7,6 +7,11 @@
     <title>M1S05 - Exercícios</title>
     <link rel="stylesheet" href="../M1S03/styles/base.css">
     <link rel="stylesheet" href="../M1S03/styles/styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/atom-one-dark.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script src="./scripts/ex1.js" type="module"></script>
+    <script src="./scripts/ex2.js" type="module"></script>
     <script src="./app.js" async type="module"></script>
 </head>
 <body>
@@ -19,18 +24,116 @@
 
     <main>
 
-        <ul>
+        <ul id="m1s05">
             <li id="ex1">
-                <div class="exercise-title" onclick="showExercise(event)">Ex 1 - Classe Funcionário</div>
+                <div class="exercise-title">Ex 1 - Classe Funcionário</div>
+            
+                <div class="description hidden">
+                    <p>Em um arquivo <code>app.js</code> incluído em <code>index.html</code> de tipo módulo <code>type="module"</code>:</p>
+                
+                    <p>Crie uma classe <strong>Funcionario</strong> para representar um(a) empregado(a) de uma empresa, contendo os atributos <code>cpf</code>, <code>nomeCompleto</code> e <code>salario</code>.</p>
+                
+                    <p>Implemente também um método <code>promover(percentual)</code> que recebe como parâmetro um percentual, devendo o salário ser aumentado pelo percentual indicado no argumento do método.</p>
+                
+                    <p>Crie e utilize um objeto desta classe para testar a implementação.</p>
+
+                    <pre>
+                        <span class="linenumbers">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </span>
+                        <code>const ada = new Funcionario("528.442.040-31", "Ada Lovelace", 1000);<br><br>console.log(ada.salario); // 1000<br><br>ada.promover(50);<br><br>console.log(ada.salario); // 1500</code>                        
+                    </pre>  
+
+                    <hr>
+
+                    <p>Extras:</p>
+
+                    <ul>
+                        <li><span>Crie a classe em um arquivo separado <code>Funcionario.js</code>, a exporte como padrão (<code>export default</code>), importe-a em <code>app.js</code> e use-a no código.</span></li>
+                        <li><span>Valide o CPF informado e imprima no console se o CPF informado é válido ou não.</span></li>
+                    </ul>
+
+                    <div class="exercise-buttons">
+                        <button class="code-button">ver código</button>
+                        <button class="run-button">Rodar exercício</button>
+                    </div>
+                </div>
             </li>
 
-            <div class="description hidden">
-                <p>Em um arquivo `app.js` incluído em `index.html` de tipo módulo `type="module"`:</p>
-            </div>
+            <li id="ex2">
+                <div class="exercise-title">Ex 2 - Classe Fatura</div>
+
+                <div class="description hidden">
+                    <p>Em três arquivos (<code>index.html</code>, <code>app.js</code>, <code>Fatura.js</code>) resolva o seguinte exercício:</p>
+                
+                    <p>Inclua o arquivo <code>app.js</code> em <code>index.html</code> como <code>type="module"</code>.</p>
+                
+                    <p>Em <code>Fatura.js</code>, crie uma classe chamada <strong>Fatura</strong> que possa ser utilizada por uma fábrica, representando um item vendido e a exporte como padrão (<code>export default</code>). </p>
+                
+                    <p>
+                        Uma fatura deve incluir as seguintes informações como atributos:<br>
+                        • <code>id</code>:<em>number</em> identificador do item faturado (código do produto)<br>
+                        • <code>descricao</code>:<em>string</em> com a descrição do item<br>
+                        • <code>quantia</code>:<em>number</em> com a quantidade comprada do item<br>
+                        • <code>preco</code>:<em>number</em> com o preço unitário do item
+                    </p>
+
+                    <p>
+                        Sua classe deve ter um construtor que inicialize todos os atributos. <br>
+                        Se a quantidade não for positiva, ela deve ser indicada como <code>0</code> (zero). <br> 
+                        Se o preço por item não for positivo ele deve ser indicado como <code>0</code>.
+                    </p>
+
+                    <p>Implemente um <strong>método</strong> chamado <code>obterValorTotal()</code> que calcula o valor da fatura (isso é, multiplica a quantidade pelo preço do item).</p>
+                
+                    <p>Importe a classe <code>Fatura</code> em <code>app.js</code> e crie pelo menos uma instância desta classe para testar a implementação.</p>
+                
+                    <p>Exemplos:</p>
+
+                    <pre>
+                        <span class="linenumbers">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </span>
+                        <code>const melao = new Fatura(123, "Melão", 2, 3);<br><br>const valor = melao.obterValorTotal();<br><br>console.log(valor); // 6</code>                        
+                    </pre> 
+
+                    <hr>
+
+                    <p>Extra: Crie um método <em>getter</em> de nome <code>valorTotal</code> que faz o mesmo cálculo implementado em <code>obterValorTotal</code>, mas que possa ser acessado sem o uso dos parêntesis.</p>
+                
+                    <div class="exercise-buttons">
+                        <button class="code-button">ver código</button>
+                        <button class="run-button">Rodar exercício</button>
+                    </div>
+                </div>
+            </li>            
         </ul>
 
+        <div class="code-container hidden-code">
+            <div id="code-container-frame">
+                <div class="header">
+                    <h1 id="code-title">Código do exercício #n</h1>
+                    <div id="code-close"> x </div>
+                </div>
+                
+                <pre>
+                    <code id="code"></code>
+                </pre>
+            </div>
+        </div>
 
-        <form id="form-autenticacao">
+
+        <form id="form-autenticacao" class="hidden" style="overflow: hidden;">
             <input type="text" name="email" placeholder="email">
             <input type="password" name="senha" placeholder="senha">
             <button>entrar</button>
