@@ -7,6 +7,7 @@ import CalculadoraDeArea from './CalculadoraDeArea.js'
 import Juros from './Juros.js';
 import Time from './Time.js';
 import Partida from './Partida.js';
+import Usuario from './Usuario.js';
 
 
 window.ex1 = () => {
@@ -78,7 +79,7 @@ window.ex6 = () => {
 window.ex7 = () => {
     const jogo1 = new Partida('sport', 2, 'curintia', 3);
     const jogo2 = new Partida('curintia', 2, 'inter', 2);
-    const jogo3 = new Partida('palmeiras', 4, 'curintia', 2);
+    const jogo3 = new Partida('parmera', 4, 'curintia', 2);
 
     const curintia = new Time('curintia');
 
@@ -89,3 +90,20 @@ window.ex7 = () => {
     curintia.exibirSituacao();
 }
 
+const ex8 = (event) => {
+    event.preventDefault();    
+    const usuarioCadastrado = new Usuario('jonathan', 'jonatesch@gmail.com', 'senha');
+  
+    const emailInformado = event.target.email.value;
+    const senhaInformada = event.target.senha.value;
+
+    if(usuarioCadastrado.autenticar(emailInformado, senhaInformada)) {
+        alert("feito o carreto!");
+    } else {
+        alert("na")
+    }
+    
+}
+
+const formAutenticacao = document.getElementById("form-autenticacao");
+formAutenticacao.addEventListener("submit", ex8);

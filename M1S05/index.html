@@ -5,9 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M1S05 - Exercícios</title>
+    <link rel="stylesheet" href="../M1S03/styles/base.css">
+    <link rel="stylesheet" href="../M1S03/styles/styles.css">
     <script src="./app.js" async type="module"></script>
 </head>
 <body>
-    
+    <header>
+        <a href="../index.html"><button>voltar</button></a>
+        <div>
+            <h2>Módulo 1 - <span>Exercícios da Semana 05</span></h2> 
+        </div>        
+    </header>
+
+    <main>
+
+        <ul>
+            <li id="ex1">
+                <div class="exercise-title" onclick="showExercise(event)">Ex 1 - Classe Funcionário</div>
+            </li>
+
+            <div class="description hidden">
+                <p>Em um arquivo `app.js` incluído em `index.html` de tipo módulo `type="module"`:</p>
+            </div>
+        </ul>
+
+
+        <form id="form-autenticacao">
+            <input type="text" name="email" placeholder="email">
+            <input type="password" name="senha" placeholder="senha">
+            <button>entrar</button>
+        </form> 
+    </main>
+
 </body>
 </html>
