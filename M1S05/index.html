@@ -14,6 +14,7 @@
     <script src="./scripts/ex2.js" type="module"></script>
     <script src="./scripts/ex3.js" type="module"></script>
     <script src="./scripts/ex4.js" type="module"></script>
+    <script src="./scripts/ex5.js" type="module"></script>
     <script src="./app.js" async type="module"></script>
 </head>
 <body>
@@ -188,6 +189,54 @@
                             <i></i>
                         </span>
                         <code>const snoopy = new Cachorro('snoopy', 10);<br>console.log( snoopy.som );   // "latido" <br>const frajola = new Gato('frajola', 8);<br>console.log( frajola.som );   // "miado"</code>                        
+                    </pre> 
+
+                    <div class="exercise-buttons">
+                        <button class="code-button">ver código</button>
+                        <button class="run-button">Rodar exercício</button>
+                    </div>
+                </div>
+            </li>
+
+            <li id="ex5">
+                <div class="exercise-title">Ex 5 -  Classe Área</div>
+
+                <div class="description hidden">
+                    <p>Em três arquivos (<code>index.html</code>, <code>app.js</code>, <code>Fatura.js</code>) resolva o seguinte exercício:</p>
+                
+                    <p>Inclua o arquivo <code>app.js</code> em <code>index.html</code> como <code>type="module"</code>.</p>
+               
+                    <p>Em <code>CalculadoraDeArea.js</code>, crie uma classe <strong>CalculadoraDeArea</strong> que tenha os atributos <code>tipo</code> (<em>string</em>), <code>base</code> (<em>number</em>) e <code>altura</code> (<em>number</em>).</p>
+                
+                    <p>Implemente o método <code>calcular()</code> que faça o cálculo da área conforme o <code>tipo</code> do polígono informado:</p>
+                
+                    <p>
+                        <ul>                        
+                            <li><span>"triangulo": <code>(base * altura) / 2</code></span></li>
+                            <li><span>"quadrado" e "retangulo" : <code>base * altura</code></span></li>
+                        </ul>
+                    </p>                   
+
+                    <p>
+                        Importe a classe <code>CalculadoraDeArea</code> em <code>app.js</code> e teste a implementação com instâncias dessa classe para 
+                        um triângulo de base 6 cm e altura 8 cm, para um quadrado de base e altura de 4 cm e um retângulo de base 4 cm e altura 6 cm.
+                    </p>
+
+                    <p>Imprima o resultado calculado no console.</p>
+
+                    <p>Exemplos:</p>
+
+                    <pre>
+                        <span class="linenumbers">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </span>
+                        <code>const quadA = new CalculadoraDeArea("quadrado", 6, 6);<br>const areaQA = quadA.calcular();<br>console.log(areaQA); // 36<br><br>const triangB = new CalculadoraDeArea("triangulo", 8, 7);<br>const areaTB = triangB.calcular();<br>console.log(areaTB); // 28</code>                        
                     </pre> 
 
                     <div class="exercise-buttons">

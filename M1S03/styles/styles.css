@@ -74,7 +74,7 @@ main {
     padding-bottom: 40px;
 }
 
-main ul li:not(:last-child){
+main > ul > li:not(:last-child){
     margin-bottom: 15px;
 }
 
