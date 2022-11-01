@@ -1,4 +1,3 @@
-import Personagem from './Personagem.js';
 import {Cachorro, Gato} from './Animal.js'
 import CalculadoraDeArea from './CalculadoraDeArea.js'
 import Juros from './Juros.js';
@@ -7,17 +6,7 @@ import Partida from './Partida.js';
 import Usuario from './Usuario.js';
 
 window.ex3 = () => {
-    const jonathan = new Personagem("Jonathan");
 
-    jonathan.sofreuDano(15);
-    jonathan.usouKitMedico();
-    jonathan.usouKitMedico();
-    jonathan.sofreuDano(30);
-    jonathan.sofreuDano(49);
-    jonathan.usouKitMedico();
-    jonathan.sofreuDano(50);
-
-    console.log(jonathan)
 }
 
 window.ex4 = () => {
