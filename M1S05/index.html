@@ -12,6 +12,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
     <script src="./scripts/ex1.js" type="module"></script>
     <script src="./scripts/ex2.js" type="module"></script>
+    <script src="./scripts/ex3.js" type="module"></script>
     <script src="./app.js" async type="module"></script>
 </head>
 <body>
@@ -116,7 +117,51 @@
                         <button class="run-button">Rodar exercício</button>
                     </div>
                 </div>
-            </li>            
+            </li>    
+            
+            <li id="ex3">
+                <div class="exercise-title">Ex 3 - Classe Personagem</div>
+
+                <div class="description hidden">
+                    <p>Em três arquivos (<code>index.html</code>, <code>app.js</code>, <code>Personagem.js</code>) resolva o seguinte exercício:</p>
+                
+                    <p>Inclua o arquivo <code>app.js</code> em <code>index.html</code> como <code>type="module"</code>.</p>
+
+                    <p>Para modelar um jogo de ação, em <code>Personajem.js</code>, crie a classe <strong>Personagem</strong> que possua os atributos <code>nome</code> e <code>percentualVida</code> e a exporte como padrão (<code>export default</code>).</p>
+               
+                    <p>O <code>nome</code> deve ser indicado no construtor da classe, e o percentual de vida é iniciado com 100.</p>
+                
+                    <p>Crie o método <code>sofreuDano(percentualDano)</code> cuja implementação diminua o valor de <code>percentualDano</code> do percentual de vida do personagem (até o limite de zero).</p>
+                
+                    <p>Crie também o método <code>usouKitMedico()</code> que adiciona 10 pontos ao percentual de vida do personagem (até o limite de 100).</p>
+                
+                    <p>Importe a classe <code>Personagem</code> em <code>app.js</code> e crie pelo menos uma instância de personagem para testar.</p>
+
+                    <p>Exemplo:</p>
+
+                    <pre>
+                        <span class="linenumbers">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </span>
+                        <code>const alyx = new Personagem("Alyx");<br><br>console.log(alyx.percentualVida); // 100<br><br>alyx.sofreuDano(50);<br><br>console.log(alyx.percentualVida); // 50<br><br>alyx.usouKitMedico();<br><br>console.log(alyx.percentualVida); // 60</code>                        
+                    </pre> 
+
+                    <div class="exercise-buttons">
+                        <button class="code-button">ver código</button>
+                        <button class="run-button">Rodar exercício</button>
+                    </div>
+                </div>
+            </li>
         </ul>
 
         <div class="code-container hidden-code">

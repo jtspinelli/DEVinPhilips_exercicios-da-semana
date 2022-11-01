@@ -4,11 +4,11 @@ export default class Personagem {
         this.percentualVida = 100;
     }
 
-    sofreuDano(percentualDano) {
-        if (this.percentualVida * (1 - (percentualDano / 100)) < 0) {
+    sofreuDano(dano) {
+        if (this.percentualVida - dano < 0) {
             this.percentualVida = 0;
         } else {
-            this.percentualVida *= 1 - (percentualDano / 100);
+            this.percentualVida -= dano;
         }
     }
 
