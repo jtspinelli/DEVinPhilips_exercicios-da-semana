@@ -3,6 +3,7 @@ import validaCpf from './cpf.js';
 import Fatura from './Fatura.js';
 import Personagem from './Personagem.js';
 import {Cachorro, Gato} from './Animal.js'
+import CalculadoraDeArea from './CalculadoraDeArea.js'
 
 
 window.ex1 = () => {
@@ -45,4 +46,16 @@ window.ex4 = () => {
 
     console.log(loiro.som);
     console.log(luna.som);
+}
+
+window.ex5 = () => {
+    const triangulo = new CalculadoraDeArea('triangulo', 6, 8);
+    const areaDoTriangulo = triangulo.calcular();
+    const quadrado = new CalculadoraDeArea('quadrado', 4, 4);
+    const areaDoQuadrado = quadrado.calcular();
+    const retangulo = new CalculadoraDeArea('retangulo', 4, 6);
+    const areaDoRetangulo = retangulo.calcular();
+    console.log(areaDoTriangulo);
+    console.log(areaDoQuadrado);
+    console.log(areaDoRetangulo);
 }
