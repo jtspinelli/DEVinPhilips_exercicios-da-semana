@@ -13,6 +13,7 @@
     <script src="./scripts/ex1.js" type="module"></script>
     <script src="./scripts/ex2.js" type="module"></script>
     <script src="./scripts/ex3.js" type="module"></script>
+    <script src="./scripts/ex4.js" type="module"></script>
     <script src="./app.js" async type="module"></script>
 </head>
 <body>
@@ -154,6 +155,39 @@
                             <i></i>
                         </span>
                         <code>const alyx = new Personagem("Alyx");<br><br>console.log(alyx.percentualVida); // 100<br><br>alyx.sofreuDano(50);<br><br>console.log(alyx.percentualVida); // 50<br><br>alyx.usouKitMedico();<br><br>console.log(alyx.percentualVida); // 60</code>                        
+                    </pre> 
+
+                    <div class="exercise-buttons">
+                        <button class="code-button">ver código</button>
+                        <button class="run-button">Rodar exercício</button>
+                    </div>
+                </div>
+            </li>
+
+            <li id="ex4">
+                <div class="exercise-title">Ex 4 - Subclasses Animal</div>
+
+                <div class="description hidden">
+                    <p>Em três arquivos (<code>index.html</code>, <code>app.js</code>, <code>Fatura.js</code>) resolva o seguinte exercício:</p>
+                
+                    <p>Inclua o arquivo <code>app.js</code> em <code>index.html</code> como <code>type="module"</code>.</p>
+                
+                    <p>No arquivo <code>Animal.js</code>, crie a classe <strong>Animal</strong> com os atributos <code>nome</code>, <code>idade</code> e <code>som</code>.</p>
+                
+                    <p>Depois crie as subclasses (de <strong>Animal</strong>) <strong>Cachorro</strong> e <strong>Gato</strong> com os atributos <code>nome</code> e <code>idade</code>, inicializando o atributo <code>som</code> da superclasse com <code>"latido"</code> e <code>"miado"</code>, respectivamente e exporte ambas com <code>export</code> comuns.</p>
+               
+                    <p>Importe as classes <code>Cahorro</code> e <code>Gato</code> para <code>app.js</code>, crie uma instância de cada subclasse para testar, conforme abaixo.</p>
+                
+                    <p>Exemplos:</p>
+
+                    <pre>
+                        <span class="linenumbers">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </span>
+                        <code>const snoopy = new Cachorro('snoopy', 10);<br>console.log( snoopy.som );   // "latido" <br>const frajola = new Gato('frajola', 8);<br>console.log( frajola.som );   // "miado"</code>                        
                     </pre> 
 
                     <div class="exercise-buttons">
