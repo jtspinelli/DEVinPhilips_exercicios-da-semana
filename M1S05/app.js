@@ -76,12 +76,16 @@ window.ex6 = () => {
 }
 
 window.ex7 = () => {
-    const jogo = new Partida('sport', 2, 'curintia', 3);
+    const jogo1 = new Partida('sport', 2, 'curintia', 3);
+    const jogo2 = new Partida('curintia', 2, 'inter', 2);
+    const jogo3 = new Partida('palmeiras', 4, 'curintia', 2);
 
     const curintia = new Time('curintia');
 
-    curintia.computarPartida(jogo);
+    curintia.computarPartida(jogo1);
+    curintia.computarPartida(jogo2);
+    curintia.computarPartida(jogo3);
 
-    console.log(curintia);
+    curintia.exibirSituacao();
 }
 
