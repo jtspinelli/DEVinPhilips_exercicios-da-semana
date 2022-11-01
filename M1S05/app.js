@@ -5,6 +5,9 @@ import Personagem from './Personagem.js';
 import {Cachorro, Gato} from './Animal.js'
 import CalculadoraDeArea from './CalculadoraDeArea.js'
 import Juros from './Juros.js';
+import Time from './Time.js';
+import Partida from './Partida.js';
+
 
 window.ex1 = () => {
     const jonathan = new Funcionario('Jonathan Spinelli', '01857203070', 1000);
@@ -71,3 +74,14 @@ window.ex6 = () => {
     console.log(Juros.valueAsCurrency(aplicacao2.calcularJurosSimples().toFixed(2)));
     console.log(Juros.valueAsCurrency(aplicacao2.calcularJurosCompostos().toFixed(2)));
 }
+
+window.ex7 = () => {
+    const jogo = new Partida('sport', 2, 'curintia', 3);
+
+    const curintia = new Time('curintia');
+
+    curintia.computarPartida(jogo);
+
+    console.log(curintia);
+}
+
