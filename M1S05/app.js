@@ -4,7 +4,7 @@ import Fatura from './Fatura.js';
 import Personagem from './Personagem.js';
 import {Cachorro, Gato} from './Animal.js'
 import CalculadoraDeArea from './CalculadoraDeArea.js'
-
+import Juros from './Juros.js';
 
 window.ex1 = () => {
     const jonathan = new Funcionario('Jonathan Spinelli', '01857203070', 1000);
@@ -58,4 +58,16 @@ window.ex5 = () => {
     console.log(areaDoTriangulo);
     console.log(areaDoQuadrado);
     console.log(areaDoRetangulo);
+}
+
+window.ex6 = () => {
+    const aplicacao1 = new Juros(10000, 0.07, 24);
+
+    console.log(Juros.valueAsCurrency(aplicacao1.calcularJurosSimples().toFixed(2)));
+    console.log(Juros.valueAsCurrency(aplicacao1.calcularJurosCompostos().toFixed(2)));
+
+    const aplicacao2 = new Juros(10000, 0.15, 120);
+
+    console.log(Juros.valueAsCurrency(aplicacao2.calcularJurosSimples().toFixed(2)));
+    console.log(Juros.valueAsCurrency(aplicacao2.calcularJurosCompostos().toFixed(2)));
 }
