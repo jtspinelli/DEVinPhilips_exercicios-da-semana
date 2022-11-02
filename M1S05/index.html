@@ -15,6 +15,7 @@
     <script src="./scripts/ex3.js" type="module"></script>
     <script src="./scripts/ex4.js" type="module"></script>
     <script src="./scripts/ex5.js" type="module"></script>
+    <script src="./scripts/ex6.js" type="module"></script>
     <script src="./app.js" async type="module"></script>
 </head>
 <body>
@@ -244,6 +245,38 @@
                         <button class="run-button">Rodar exercício</button>
                     </div>
                 </div>
+            </li>
+
+            <li id="ex6">
+                <div class="exercise-title">Ex 6 -  Classe Juros</div>
+
+                <div class="description hiddenn">
+                    <p>Em três arquivos (<code>index.html</code>, <code>app.js</code>, <code>Fatura.js</code>) resolva o seguinte exercício:</p>
+                
+                    <p>Inclua o arquivo <code>app.js</code> em <code>index.html</code> como <code>type="module"</code>.</p>
+                    
+                    <p>
+                        Os juros de uma aplicação podem ser calculados de forma simples ou composta.<br>
+                        Para o cálculo, geralmente se usa a letra <code>C</code> ou <code>M</code> para representar o montante final da aplicação, 
+                        a letra <code>i</code> para representar a taxa aplicada (ao mês ou anual) e a letra <code>t</code> indicando o tempo (em meses ou anos) da aplicação.
+                    </p>
+
+                    <p>Em <code>Juros.js</code>, crie uma classe <strong>Juros</strong>, que tenha como atributos o <code>capitalInicial</code>, a <code>taxaAplicada</code> e o <code>tempo</code> (no mesmo período: meses ou anos) exportando-a como padrão (<code>export default</code>).</p>
+                
+                    <p><strong>a)</strong> Adicione o método <code>calcularJurosSimples()</code> que faça o cálculo usando a fórmula <code>J = C * i * t</code></p>
+                
+                    <p><strong>b)</strong> Adicione o método <code>calcularJurosCompostos()</code> que faça o cálculo usando a fórmula <code>M = C * (1 + i) ** t</code></p>
+                
+                    <p><strong>c)</strong> Importe a classe em <code>app.js</code> e teste a implementação da classe imprimindo no console os valores de juros simples e composto para uma aplicação de 10.000 reais a uma taxa de 7% ao mês (ou seja, 0.07) pelo período de 24 meses.</p>
+               
+                    <p><strong>d)</strong> Teste também (imprimindo igualmente no console) os valores de juros simples e composto para uma aplicação de 10.000 reais a uma taxa de 15% ao ano (ou seja, 0.15) pelo período de 10 anos.</p>
+                
+                    <div class="exercise-buttons">
+                        <button class="code-button">ver código</button>
+                        <button class="run-button">Rodar exercício</button>
+                    </div>
+                </div>
+
             </li>
         </ul>
 

@@ -1,24 +1,7 @@
-
-import Juros from './Juros.js';
 import Time from './Time.js';
 import Partida from './Partida.js';
 import Usuario from './Usuario.js';
 
-window.ex5 = () => {
-
-}
-
-window.ex6 = () => {
-    const aplicacao1 = new Juros(10000, 0.07, 24);
-
-    console.log(Juros.valueAsCurrency(aplicacao1.calcularJurosSimples().toFixed(2)));
-    console.log(Juros.valueAsCurrency(aplicacao1.calcularJurosCompostos().toFixed(2)));
-
-    const aplicacao2 = new Juros(10000, 0.15, 120);
-
-    console.log(Juros.valueAsCurrency(aplicacao2.calcularJurosSimples().toFixed(2)));
-    console.log(Juros.valueAsCurrency(aplicacao2.calcularJurosCompostos().toFixed(2)));
-}
 
 window.ex7 = () => {
     const jogo1 = new Partida('sport', 2, 'curintia', 3);
