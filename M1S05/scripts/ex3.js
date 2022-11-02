@@ -19,4 +19,6 @@ window.exercicio3 = () => {
     jonathan.sofreuDano(49);
     
     console.log(jonathan.percentualVida)
+
+    console.log("// Fim do Exercício 3.");
 }

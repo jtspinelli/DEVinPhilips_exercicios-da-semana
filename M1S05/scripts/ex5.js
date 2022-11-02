@@ -12,4 +12,6 @@ window.exercicio5 = () => {
     console.log(`Área do triângulo: ${areaDoTriangulo}`);
     console.log(`Área do quadrado: ${areaDoQuadrado}`);
     console.log(`Área do retângulo: ${areaDoRetangulo}`);
+
+    console.log("// Fim do Exercício 5.");
 }

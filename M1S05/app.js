@@ -1,57 +1,5 @@
-
-import Juros from './Juros.js';
-import Time from './Time.js';
-import Partida from './Partida.js';
-import Usuario from './Usuario.js';
-
-window.ex5 = () => {
-
-}
-
-window.ex6 = () => {
-    const aplicacao1 = new Juros(10000, 0.07, 24);
-
-    console.log(Juros.valueAsCurrency(aplicacao1.calcularJurosSimples().toFixed(2)));
-    console.log(Juros.valueAsCurrency(aplicacao1.calcularJurosCompostos().toFixed(2)));
-
-    const aplicacao2 = new Juros(10000, 0.15, 120);
-
-    console.log(Juros.valueAsCurrency(aplicacao2.calcularJurosSimples().toFixed(2)));
-    console.log(Juros.valueAsCurrency(aplicacao2.calcularJurosCompostos().toFixed(2)));
-}
-
-window.ex7 = () => {
-    const jogo1 = new Partida('sport', 2, 'curintia', 3);
-    const jogo2 = new Partida('curintia', 2, 'inter', 2);
-    const jogo3 = new Partida('parmera', 4, 'curintia', 2);
-
-    const curintia = new Time('curintia');
-
-    curintia.computarPartida(jogo1);
-    curintia.computarPartida(jogo2);
-    curintia.computarPartida(jogo3);
-
-    curintia.exibirSituacao();
-}
-
-const ex8 = (event) => {
-    event.preventDefault();    
-    const usuarioCadastrado = new Usuario('jonathan', 'jonatesch@gmail.com', 'senha');
-  
-    const emailInformado = event.target.email.value;
-    const senhaInformada = event.target.senha.value;
-
-    if(usuarioCadastrado.autenticar(emailInformado, senhaInformada)) {
-        alert("feito o carreto!");
-    } else {
-        alert("na")
-    }
-    
-}
-
 // Variáveis:
 let text = "";
-const formAutenticacao = document.getElementById("form-autenticacao");
 const titulosExerciciosM1S05 = document.querySelectorAll('ul#m1s05 li .exercise-title');
 const runButtons = document.querySelectorAll('ul#m1s05 button.run-button');
 const showCodeButtons = document.querySelectorAll('ul#m1s05 button.code-button');
@@ -62,7 +10,6 @@ const showCodeCloseButton = document.getElementById("code-close");
 
 
 // Event Listeners:
-formAutenticacao.addEventListener("submit", ex8);
 
 showCodeCloseButton.addEventListener("click", closeCode);
 

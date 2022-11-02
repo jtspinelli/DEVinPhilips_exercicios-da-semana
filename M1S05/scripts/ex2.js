@@ -8,5 +8,5 @@ window.exercicio2 = () => {
     console.log(fatura);
     console.log(`Valor total: ${fatura.valorTotal}`);
     
-    console.log('// Fim do Exercício #2.');
+    console.log("// Fim do Exercício 2.");
 }

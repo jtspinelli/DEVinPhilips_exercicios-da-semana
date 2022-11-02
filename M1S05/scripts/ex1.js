@@ -14,5 +14,5 @@ window.exercicio1 = () => {
     
     console.log(`Cpf informado é válido: ${validaCpf(jonathan.cpf)}`);
     
-    console.log('// Fim do Exercício #1.');
+    console.log("// Fim do Exercício 1.");
 };

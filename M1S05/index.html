@@ -15,7 +15,10 @@
     <script src="./scripts/ex3.js" type="module"></script>
     <script src="./scripts/ex4.js" type="module"></script>
     <script src="./scripts/ex5.js" type="module"></script>
-    <script src="./app.js" async type="module"></script>
+    <script src="./scripts/ex6.js" type="module"></script>
+    <script src="./scripts/ex7.js" type="module"></script>
+    <script src="./scripts/ex8.js" type="module"></script>
+    <script src="./app.js" defer type="module"></script>
 </head>
 <body>
     <header>
@@ -245,6 +248,138 @@
                     </div>
                 </div>
             </li>
+
+            <li id="ex6">
+                <div class="exercise-title">Ex 6 -  Classe Juros</div>
+
+                <div class="description hidden">
+                    <p>Em três arquivos (<code>index.html</code>, <code>app.js</code>, <code>Fatura.js</code>) resolva o seguinte exercício:</p>
+                
+                    <p>Inclua o arquivo <code>app.js</code> em <code>index.html</code> como <code>type="module"</code>.</p>
+                    
+                    <p>
+                        Os juros de uma aplicação podem ser calculados de forma simples ou composta.<br>
+                        Para o cálculo, geralmente se usa a letra <code>C</code> ou <code>M</code> para representar o montante final da aplicação, 
+                        a letra <code>i</code> para representar a taxa aplicada (ao mês ou anual) e a letra <code>t</code> indicando o tempo (em meses ou anos) da aplicação.
+                    </p>
+
+                    <p>Em <code>Juros.js</code>, crie uma classe <strong>Juros</strong>, que tenha como atributos o <code>capitalInicial</code>, a <code>taxaAplicada</code> e o <code>tempo</code> (no mesmo período: meses ou anos) exportando-a como padrão (<code>export default</code>).</p>
+                
+                    <p><strong>a)</strong> Adicione o método <code>calcularJurosSimples()</code> que faça o cálculo usando a fórmula <code>J = C * i * t</code></p>
+                
+                    <p><strong>b)</strong> Adicione o método <code>calcularJurosCompostos()</code> que faça o cálculo usando a fórmula <code>M = C * (1 + i) ** t</code></p>
+                
+                    <p><strong>c)</strong> Importe a classe em <code>app.js</code> e teste a implementação da classe imprimindo no console os valores de juros simples e composto para uma aplicação de 10.000 reais a uma taxa de 7% ao mês (ou seja, 0.07) pelo período de 24 meses.</p>
+               
+                    <p><strong>d)</strong> Teste também (imprimindo igualmente no console) os valores de juros simples e composto para uma aplicação de 10.000 reais a uma taxa de 15% ao ano (ou seja, 0.15) pelo período de 10 anos.</p>
+                
+                    <div class="exercise-buttons">
+                        <button class="code-button">ver código</button>
+                        <button class="run-button">Rodar exercício</button>
+                    </div>
+                </div>
+            </li>
+
+            <li id="ex7">
+                <div class="exercise-title">Ex 7 -  Classe Time</div>
+
+                <div class="description hidden">
+                    <p>Em três arquivos (<code>index.html</code>, <code>app.js</code>, <code>Fatura.js</code>) resolva o seguinte exercício:</p>
+                
+                    <p>Inclua o arquivo <code>app.js</code> em <code>index.html</code> como <code>type="module"</code>.</p>
+                    
+                    <p>O sistema de pontuação por partida no Campeonato Brasileiro de Futebol funciona assim:</p>
+
+                    <pre>
+                        <span class="linenumbers">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </span>
+                        <code>Vitória = 3 pontos<br>Derrota = 0 pontos<br>Empate  = 1 ponto</code>                        
+                    </pre> 
+
+                    <p>
+                        <strong>a)</strong> Em <code>Time.js</code>, implemente uma classe <strong>Time</strong> com os atributos: 
+                        <code>nome</code> do time, <code>sigla</code> do time, quantidade de <code>vitorias</code>, <code>derrotas</code>, <code>empates</code>, 
+                        quantidade de <code>golsMarcados</code> e <code>golsSofridos</code>.
+                    </p>
+
+                    <p><strong>b)</strong> Adicione nesta classe métodos <em>getters</em> para atributos calculados: <code>numeroDeJogos</code> (soma de vitorias, derrotas e empates) e <code>numeroDePontos</code> (aplicando regra de pontuação acima).</p>
+                
+                    <p><strong>c)</strong> Em <code>Partida.js</code>, crie uma classe <strong>Partida</strong>, com os atributos: <code>siglaTimeA</code>, <code>golsTimeA</code>, <code>siglaTimeB</code>, <code>golsTimeB</code>.</p>
+                
+                    <p>
+                        <strong>d)</strong> Adicione na classe <code>Time</code> um método <code>computarPartida</code>, que receba uma instância (objeto) de <code>Partida</code> como argumento. Se a partida recebida como argumento tiver como time participante (time A ou B) o time da classe, 
+                        deve-se atualizar os atributos de <code>vitorias</code>/<code>derrotas</code>/<code>empates</code> do time dependendo do resultado da partida e <code>golsMarcados</code>/<code>golsSofridos</code> conforme placar da partida.
+                    </p>
+
+                    <p><strong>e)</strong> Adicione mais um método <code>exibirSituacao()</code> que imprima no console todos os atributos do time (para conferência das implementações acima).</p>
+
+                    <p><strong>f)</strong> Em <code>app.js</code> importe e teste suas classes criando uma instâncias dela e instâncias de partidas a serem computadas, para conferir os resultados.</p>
+                
+                    <div class="exercise-buttons">
+                        <button class="code-button">ver código</button>
+                        <button class="run-button">Rodar exercício</button>
+                    </div>
+                </div>
+            </li>
+
+            <li id="ex8">
+                <div class="exercise-title">Ex 8 -  Classe Usuário</div>
+
+                <div class="description hidden">
+                    <p>Crie uma pagina HTML de autenticacao baseado no layout em anexo.</p>
+
+                    <p>Dado a classe <strong>Usuário</strong> abaixo:</p>
+                    
+                    <pre>
+                        <span class="linenumbers">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </span>
+                        <code>class Usuario {<br>   constructor(nome, email, senha) {<br>       this.nome = nome;<br>       this.email = email;<br>       this.senha = senha;<br>   }<br><br>   autenticar(emailInformado, senhaInformada) {<br>        return (this.email === emailInformado && this.senha === senhaInformada);<br>   }<br>}</code>
+                    </pre> 
+
+                    <p>Use esta classe 'Usuário' para implementar a autenticação quando for clicado no botão 'Acessar'.</p>
+                
+                    <p>
+                        Dicas:<br>
+                        a) Instancie um usuário indicando seus atributos: nome, email e senha (podem ser dados fixos e indicados no momento da criação do objeto).<br>
+                        b) Colocar no evento relacionado ao botão a chamada para uma função que faça uso do método 'autenticar' deste objeto previamente instanciado.<br>
+                        c) Se a autenticação tiver sucesso (resultado = true), exibir mensagem de sucesso na tela, caso contrário, exibir mensagem de credenciais inválidas.<br>
+                        Sugestão: aplique estilo CSS na página para praticar!
+                    </p>
+
+                    <hr>
+
+                    <p>Utilize as credenciais do usuário <strong>Jonathan</strong> para se autenticar utilizando o formulário abaixo:</p>
+                    <ul>
+                        <li><span>email: jonathan@devinhouse.com</span></li>
+                        <li><span>senha: senha</span></li>
+                    </ul>
+
+                    <form id="form-autenticacao" style="overflow: hidden;">
+                        <input type="text" name="email" placeholder="email">
+                        <input type="password" name="senha" placeholder="senha">
+                        <button>entrar</button>
+                    </form> 
+
+                    <div class="exercise-buttons">
+                        <button class="code-button">ver código</button>
+                        <button class="run-button">Rodar exercício</button>
+                    </div>
+                </div>
+            </li>
         </ul>
 
         <div class="code-container hidden-code">
@@ -261,11 +396,7 @@
         </div>
 
 
-        <form id="form-autenticacao" class="hidden" style="overflow: hidden;">
-            <input type="text" name="email" placeholder="email">
-            <input type="password" name="senha" placeholder="senha">
-            <button>entrar</button>
-        </form> 
+ 
     </main>
 
 </body>
