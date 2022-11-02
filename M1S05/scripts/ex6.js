@@ -12,4 +12,6 @@ window.exercicio6 = () => {
 
     console.log(Juros.valueAsCurrency(aplicacao2.calcularJurosSimples().toFixed(2)));
     console.log(Juros.valueAsCurrency(aplicacao2.calcularJurosCompostos().toFixed(2)));
+
+    console.log("// Fim do Exercício 6.");
 }

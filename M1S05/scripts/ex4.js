@@ -8,4 +8,6 @@ window.exercicio4 = () => {
 
     console.log(`Som da instância de Gato: ${loiro.som}`);
     console.log(`Som da instância de Cachorro: ${luna.som}`);
+
+    console.log("// Fim do Exercício 4.");
 }

@@ -28,7 +28,6 @@ export default class Time {
     }
 
     computarPartida(partida) {
-        console.log(partida);
         if(partida.times.includes('curintia')) {
             if(this.nome == partida.siglaTimeA) {
                 this.golsMarcados += partida.golsTimeA;

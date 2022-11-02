@@ -16,6 +16,7 @@
     <script src="./scripts/ex4.js" type="module"></script>
     <script src="./scripts/ex5.js" type="module"></script>
     <script src="./scripts/ex6.js" type="module"></script>
+    <script src="./scripts/ex7.js" type="module"></script>
     <script src="./app.js" async type="module"></script>
 </head>
 <body>
@@ -250,7 +251,7 @@
             <li id="ex6">
                 <div class="exercise-title">Ex 6 -  Classe Juros</div>
 
-                <div class="description hiddenn">
+                <div class="description hidden">
                     <p>Em três arquivos (<code>index.html</code>, <code>app.js</code>, <code>Fatura.js</code>) resolva o seguinte exercício:</p>
                 
                     <p>Inclua o arquivo <code>app.js</code> em <code>index.html</code> como <code>type="module"</code>.</p>
@@ -276,7 +277,51 @@
                         <button class="run-button">Rodar exercício</button>
                     </div>
                 </div>
+            </li>
 
+            <li id="ex7">
+                <div class="exercise-title">Ex 7 -  Classe Juros</div>
+
+                <div class="description hiddenn">
+                    <p>Em três arquivos (<code>index.html</code>, <code>app.js</code>, <code>Fatura.js</code>) resolva o seguinte exercício:</p>
+                
+                    <p>Inclua o arquivo <code>app.js</code> em <code>index.html</code> como <code>type="module"</code>.</p>
+                    
+                    <p>O sistema de pontuação por partida no Campeonato Brasileiro de Futebol funciona assim:</p>
+
+                    <pre>
+                        <span class="linenumbers">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </span>
+                        <code>Vitória = 3 pontos<br>Derrota = 0 pontos<br>Empate  = 1 ponto</code>                        
+                    </pre> 
+
+                    <p>
+                        <strong>a)</strong> Em <code>Time.js</code>, implemente uma classe <strong>Time</strong> com os atributos: 
+                        <code>nome</code> do time, <code>sigla</code> do time, quantidade de <code>vitorias</code>, <code>derrotas</code>, <code>empates</code>, 
+                        quantidade de <code>golsMarcados</code> e <code>golsSofridos</code>.
+                    </p>
+
+                    <p><strong>b)</strong> Adicione nesta classe métodos <em>getters</em> para atributos calculados: <code>numeroDeJogos</code> (soma de vitorias, derrotas e empates) e <code>numeroDePontos</code> (aplicando regra de pontuação acima).</p>
+                
+                    <p><strong>c)</strong> Em <code>Partida.js</code>, crie uma classe <strong>Partida</strong>, com os atributos: <code>siglaTimeA</code>, <code>golsTimeA</code>, <code>siglaTimeB</code>, <code>golsTimeB</code>.</p>
+                
+                    <p>
+                        <strong>d)</strong> Adicione na classe <code>Time</code> um método <code>computarPartida</code>, que receba uma instância (objeto) de <code>Partida</code> como argumento. Se a partida recebida como argumento tiver como time participante (time A ou B) o time da classe, 
+                        deve-se atualizar os atributos de <code>vitorias</code>/<code>derrotas</code>/<code>empates</code> do time dependendo do resultado da partida e <code>golsMarcados</code>/<code>golsSofridos</code> conforme placar da partida.
+                    </p>
+
+                    <p><strong>e)</strong> Adicione mais um método <code>exibirSituacao()</code> que imprima no console todos os atributos do time (para conferência das implementações acima).</p>
+
+                    <p><strong>f)</strong> Em <code>app.js</code> importe e teste suas classes criando uma instâncias dela e instâncias de partidas a serem computadas, para conferir os resultados.</p>
+                
+                    <div class="exercise-buttons">
+                        <button class="code-button">ver código</button>
+                        <button class="run-button">Rodar exercício</button>
+                    </div>
+                </div>
             </li>
         </ul>
 
