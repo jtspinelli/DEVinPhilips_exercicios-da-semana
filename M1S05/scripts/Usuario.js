@@ -6,6 +6,6 @@ export default class Usuario {
     }
 
     autenticar(emailInformado, senhaInformada) {
-        return this.email === this.email && this.senha === senhaInformada;
+        return this.email === emailInformado && this.senha === senhaInformada;
     }
 }

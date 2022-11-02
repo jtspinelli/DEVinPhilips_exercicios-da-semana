@@ -1,23 +1,5 @@
-import Usuario from './scripts/Usuario.js';
-
-const ex8 = (event) => {
-    event.preventDefault();    
-    const usuarioCadastrado = new Usuario('jonathan', 'jonatesch@gmail.com', 'senha');
-  
-    const emailInformado = event.target.email.value;
-    const senhaInformada = event.target.senha.value;
-
-    if(usuarioCadastrado.autenticar(emailInformado, senhaInformada)) {
-        alert("feito o carreto!");
-    } else {
-        alert("na")
-    }
-    
-}
-
 // Variáveis:
 let text = "";
-const formAutenticacao = document.getElementById("form-autenticacao");
 const titulosExerciciosM1S05 = document.querySelectorAll('ul#m1s05 li .exercise-title');
 const runButtons = document.querySelectorAll('ul#m1s05 button.run-button');
 const showCodeButtons = document.querySelectorAll('ul#m1s05 button.code-button');
@@ -28,7 +10,6 @@ const showCodeCloseButton = document.getElementById("code-close");
 
 
 // Event Listeners:
-formAutenticacao.addEventListener("submit", ex8);
 
 showCodeCloseButton.addEventListener("click", closeCode);
 

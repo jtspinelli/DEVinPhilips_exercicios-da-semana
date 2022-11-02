@@ -17,7 +17,8 @@
     <script src="./scripts/ex5.js" type="module"></script>
     <script src="./scripts/ex6.js" type="module"></script>
     <script src="./scripts/ex7.js" type="module"></script>
-    <script src="./app.js" async type="module"></script>
+    <script src="./scripts/ex8.js" type="module"></script>
+    <script src="./app.js" defer type="module"></script>
 </head>
 <body>
     <header>
@@ -280,9 +281,9 @@
             </li>
 
             <li id="ex7">
-                <div class="exercise-title">Ex 7 -  Classe Juros</div>
+                <div class="exercise-title">Ex 7 -  Classe Time</div>
 
-                <div class="description hiddenn">
+                <div class="description hidden">
                     <p>Em três arquivos (<code>index.html</code>, <code>app.js</code>, <code>Fatura.js</code>) resolva o seguinte exercício:</p>
                 
                     <p>Inclua o arquivo <code>app.js</code> em <code>index.html</code> como <code>type="module"</code>.</p>
@@ -323,6 +324,62 @@
                     </div>
                 </div>
             </li>
+
+            <li id="ex8">
+                <div class="exercise-title">Ex 8 -  Classe Usuário</div>
+
+                <div class="description hidden">
+                    <p>Crie uma pagina HTML de autenticacao baseado no layout em anexo.</p>
+
+                    <p>Dado a classe <strong>Usuário</strong> abaixo:</p>
+                    
+                    <pre>
+                        <span class="linenumbers">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </span>
+                        <code>class Usuario {<br>   constructor(nome, email, senha) {<br>       this.nome = nome;<br>       this.email = email;<br>       this.senha = senha;<br>   }<br><br>   autenticar(emailInformado, senhaInformada) {<br>        return (this.email === emailInformado && this.senha === senhaInformada);<br>   }<br>}</code>
+                    </pre> 
+
+                    <p>Use esta classe 'Usuário' para implementar a autenticação quando for clicado no botão 'Acessar'.</p>
+                
+                    <p>
+                        Dicas:<br>
+                        a) Instancie um usuário indicando seus atributos: nome, email e senha (podem ser dados fixos e indicados no momento da criação do objeto).<br>
+                        b) Colocar no evento relacionado ao botão a chamada para uma função que faça uso do método 'autenticar' deste objeto previamente instanciado.<br>
+                        c) Se a autenticação tiver sucesso (resultado = true), exibir mensagem de sucesso na tela, caso contrário, exibir mensagem de credenciais inválidas.<br>
+                        Sugestão: aplique estilo CSS na página para praticar!
+                    </p>
+
+                    <hr>
+
+                    <p>Utilize as credenciais do usuário <strong>Jonathan</strong> para se autenticar utilizando o formulário abaixo:</p>
+                    <ul>
+                        <li><span>email: jonathan@devinhouse.com</span></li>
+                        <li><span>senha: senha</span></li>
+                    </ul>
+
+                    <form id="form-autenticacao" style="overflow: hidden;">
+                        <input type="text" name="email" placeholder="email">
+                        <input type="password" name="senha" placeholder="senha">
+                        <button>entrar</button>
+                    </form> 
+
+                    <div class="exercise-buttons">
+                        <button class="code-button">ver código</button>
+                        <button class="run-button">Rodar exercício</button>
+                    </div>
+                </div>
+            </li>
         </ul>
 
         <div class="code-container hidden-code">
@@ -339,11 +396,7 @@
         </div>
 
 
-        <form id="form-autenticacao" class="hidden" style="overflow: hidden;">
-            <input type="text" name="email" placeholder="email">
-            <input type="password" name="senha" placeholder="senha">
-            <button>entrar</button>
-        </form> 
+ 
     </main>
 
 </body>

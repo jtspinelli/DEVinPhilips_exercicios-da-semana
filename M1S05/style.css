@@ -24,3 +24,17 @@ li ul li {
 li ul li span {
     margin-left: -7px;
 }
+
+form#form-autenticacao {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+form#form-autenticacao input {
+    padding: 10px;
+}
+
+form#form-autenticacao button {
+    height: 50px;
+}
