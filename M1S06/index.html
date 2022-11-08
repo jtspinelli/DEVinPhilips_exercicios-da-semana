@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M1S06 - Exercícios</title>
+    <link rel="stylesheet" href="../M1S03/styles/base.css">
+    <link rel="stylesheet" href="../M1S03/styles/styles.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/atom-one-dark.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script src="./app.js" defer type="module"></script>
+</head>
+<body>
+    <header>
+        <a href="../index.html"><button>voltar</button></a>
+        <div>
+            <h2>Módulo 1 - <span>Exercícios da Semana 06</span></h2> 
+        </div>        
+    </header>
+
+    <main>
+
+        <ul id="m1s06">
+            <li id="ex1">
+                <div class="exercise-title">Ex 1 - Sleep</div>
+            
+                <div class="description hidden">
+                    <p>Crie uma função chamada <strong>sleep</strong>, que recebe como argumento um  valor qualquer.</p>
+
+                    <p>Quando chamada, essa função precisa retornar, após 3 segundos (setTimeout), uma Promise resolvida com o valor que foi passado como argumento.</p>
+                    
+                    <p>Ex.:</p>
+
+                    <pre>
+                        <span class="linenumbers">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </span>
+
+                        <code>function sleep ( valor ) {<br>    return new Promise ( (res, rej) => {<br>        setTimeout( ... );<br>    })<br>}</code>                        
+                    </pre>  
+
+                    <hr>
+
+                    <p>Chame esta função e confirme o funcionamento dela (lembre-se que o valor do tempo de espera é aproximado!)</p>
+
+                    <div class="exercise-buttons">
+                        <button class="code-button">ver código</button>
+                        <button class="run-button">Rodar exercício</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <div class="code-container hidden-code">
+            <div id="code-container-frame">
+                <div class="header">
+                    <h1 id="code-title">Código do exercício #n</h1>
+                    <div id="code-close"> x </div>
+                </div>
+                
+                <pre>
+                    <code id="code"></code>
+                </pre>
+            </div>
+        </div>
+
+
+ 
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+.hidden {
+    max-height: 0;
+    transition: .5s;
+    padding: 0;
+}
+
+.description {
+    background-color: #f4f5f7;
+    max-height: 950px;
+    padding: 15px;
+    overflow: hidden;
+    transition: 1s;
+    position: relative;
+    padding-bottom: 72px;
+}
+
+.description p {
+    font-size: 13px;
+    margin-bottom: 15px;
+    line-height: 20px;
+}
