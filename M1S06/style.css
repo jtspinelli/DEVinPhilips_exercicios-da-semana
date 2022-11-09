@@ -29,3 +29,13 @@
     padding: 10px;
     width: 40%;
 }
+
+.description p.horario {
+    color: #c4c4c4;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.description p.horario.horario-ativo {
+    color: rgb(237 100 47);
+}

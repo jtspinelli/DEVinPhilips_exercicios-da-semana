@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/atom-one-dark.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
     <script src="./scripts/ex1.js" defer type="module"></script>
+    <script src="./scripts/ex2.js" defer type="module"></script>
     <script src="./titles.js" defer></script>
     <script src="./run.js" defer></script>
     <script src="./showCode.js" defer type="module"></script>
@@ -64,6 +65,28 @@
                     </div>
                 </div>
             </li>
+
+            <li id="ex2">
+                <div class="exercise-title">Ex 2 - Timer</div>
+            
+                <div class="description hidden">
+                    <p>Utilizando o <strong>setInterval</strong>, crie uma função que mostre o horário atual e atualize automaticamente a cada 2 segundos.</p>
+
+                    <p>O horário deve ser mostrado no formato <strong>HH:MM:SS</strong>.</p>
+
+                    <hr>
+
+                    <p style="text-align: center;">HORA AGORA<span id="horario-obs"> (clique em rodar exercício para ver o horário no campo abaixo)</span>:</p>
+
+                    <p class="horario">00:00:00</p>
+
+                    <p id="reset" class="hidden" style="text-align: center; overflow: hidden;">O relógio desligará automaticamente após 5 minutos.</p>
+
+                    <div class="exercise-buttons">
+                        <button class="code-button">ver código</button>
+                        <button class="run-button">Rodar exercício</button>
+                    </div>
+                </div>                
         </ul>
 
         <div class="code-container hidden-code">
