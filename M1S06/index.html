@@ -7,10 +7,13 @@
     <title>M1S06 - Exercícios</title>
     <link rel="stylesheet" href="../M1S03/styles/base.css">
     <link rel="stylesheet" href="../M1S03/styles/styles.css">
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/atom-one-dark.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
-    <script src="./app.js" defer type="module"></script>
+    <script src="./scripts/ex1.js" defer type="module"></script>
+    <script src="./titles.js" defer></script>
+    <script src="./run.js" defer></script>
+    <script src="./showCode.js" defer type="module"></script>
 </head>
 <body>
     <header>
@@ -43,11 +46,17 @@
                         </span>
 
                         <code>function sleep ( valor ) {<br>    return new Promise ( (res, rej) => {<br>        setTimeout( ... );<br>    })<br>}</code>                        
-                    </pre>  
+                    </pre>                   
+
+                    <p>Chame esta função e confirme o funcionamento dela (lembre-se que o valor do tempo de espera é aproximado!)</p>
 
                     <hr>
 
-                    <p>Chame esta função e confirme o funcionamento dela (lembre-se que o valor do tempo de espera é aproximado!)</p>
+                    <p>Utilize o campo abaixo para enviar dados para a função <strong>Sleep</strong>:</p>
+
+                    <div class="input-container">
+                        <input id="ex1-input" type="text">
+                    </div>
 
                     <div class="exercise-buttons">
                         <button class="code-button">ver código</button>
