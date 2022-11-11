@@ -13,6 +13,7 @@
     <script src="./scripts/ex1.js" defer type="module"></script>
     <script src="./scripts/ex2.js" defer type="module"></script>
     <script src="./scripts/ex3.js" defer type="module"></script>
+    <script src="./scripts/ex4.js" defer type="module"></script>
     <script src="./titles.js" defer></script>
     <script src="./run.js" defer></script>
     <script src="./showCode.js" defer type="module"></script>
@@ -89,7 +90,7 @@
                     </div>
                 </div>  
             </li>
-            
+
             <li id="ex3">
                 <div class="exercise-title">Ex 3 - Promise (all)</div>
             
@@ -122,7 +123,32 @@
                         <button class="run-button">Rodar exercício</button>
                     </div>
                 </div>
-            </li>          
+            </li>
+            
+            <li id="ex4">
+                <div class="exercise-title">Ex 4 - Promise (race)</div>
+            
+                <div class="description hidden">
+                    <p>O sistema de uma empresa, após efetuar a venda, chama funções remotas de duas empresas de entrega dos pedidos, e aquela que responder mais rápido nossa requisição fica responsável pela entrega.</p>
+
+                    <p>O retorno das chamadas foram adicionados nas constantes abaixo: '<em>retornoEmpresa1</em>' e '<em>retornoEmpresa2</em>'.</p>
+                
+                    <p>Usando '<strong>Promise.race()</strong>', recupere o valor da promise da empresa vencedora e imprima o resultado.</p>
+                
+                    <pre>
+                        <span class="linenumbers">
+                            <i></i> <i></i> <i></i> <i></i> <i></i> <i></i>
+                        </span>
+
+                        <code>const retornoEmpresa1 = new Promise( (resolve, reject) =><br>    setTimeout(resolve, 5000, "Empresa 1") ); // 5 segundos<br>const retornoEmpresa2 = new Promise( (resolve, reject) =><br>    setTimeout(resolve, 3000, "Empresa 2") ); // 3 segundos<br><br>// ... continue daqui ....</code>
+                    </pre>
+
+                    <div class="exercise-buttons">
+                        <button class="code-button">ver código</button>
+                        <button class="run-button">Rodar exercício</button>
+                    </div>
+                </div>
+            </li>
         </ul>
 
         <div class="code-container hidden-code">
