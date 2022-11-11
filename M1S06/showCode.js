@@ -13,7 +13,7 @@ for(let btn of showCodeButtons) {
 }
 
 showCodeContainer.addEventListener("click", closeIfClickedOutside);
-
+showCodeCloseButton.addEventListener("click", closeCode);
 
 // Funções:
 function readTextFile(file) {
