@@ -15,6 +15,7 @@
     <script src="./scripts/ex3.js" defer type="module"></script>
     <script src="./scripts/ex4.js" defer type="module"></script>
     <script src="./scripts/ex5.js" defer type="module"></script>
+    <script src="./scripts/ex6.js" defer type="module"></script>
     <script src="./titles.js" defer></script>
     <script src="./run.js" defer></script>
     <script src="./showCode.js" defer type="module"></script>
@@ -165,6 +166,27 @@
 
                         <code>function obterClienteNoBancoDeDados(idCliente) {<br>    return new Promise( (resolve, reject) => {<br>        const cliente = { nome: 'bruce wayne', id: idCliente };<br>        resolve(cliente);<br>    });<br>}<br><br>function processar() {<br>     obterClienteNoBancoDeDados(7)<br>        .then(cliente => console.log(cliente));<br>}<br><br>processar();</code>
                     </pre>
+
+                    <div class="exercise-buttons">
+                        <button class="code-button">ver código</button>
+                        <button class="run-button">Rodar exercício</button>
+                    </div>
+                </div>
+            </li>
+
+            <li id="ex6">
+                <div class="exercise-title">Ex 6 - Fetch</div>
+            
+                <div class="description hidden">
+                    <p>
+                        Existe uma API pública que retorna a idade média das pessoas que possuem o nome passado como parâmetro.<br>
+                        Para o cálculo, é usada uma base de dados interna deles, que pode ser subdividida pelo país passado também como parâmetro.
+                    </p>
+
+                    <p>
+                        Faça uma chamada para esta API e descubra a idade média das pessoas com seu nome aqui no Brasil, conforme exemplo abaixo.<br>
+                        Imprima o nome e a idade média retornados.<br>
+                        A idade está representada na propriedade '<em>age</em>' do retorno da API:</p>
 
                     <div class="exercise-buttons">
                         <button class="code-button">ver código</button>
