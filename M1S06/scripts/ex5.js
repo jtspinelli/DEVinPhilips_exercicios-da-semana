@@ -1,4 +1,6 @@
 window.exercicio5 = () => {
+    alert('Este exercício aparece no console');
+    
     processar();
 }
 
