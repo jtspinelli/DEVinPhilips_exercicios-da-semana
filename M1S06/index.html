@@ -12,6 +12,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
     <script src="./scripts/ex1.js" defer type="module"></script>
     <script src="./scripts/ex2.js" defer type="module"></script>
+    <script src="./scripts/ex3.js" defer type="module"></script>
     <script src="./titles.js" defer></script>
     <script src="./run.js" defer></script>
     <script src="./showCode.js" defer type="module"></script>
@@ -86,7 +87,42 @@
                         <button class="code-button">ver código</button>
                         <button class="run-button">Rodar exercício</button>
                     </div>
-                </div>                
+                </div>  
+            </li>
+            
+            <li id="ex3">
+                <div class="exercise-title">Ex 3 - Promise (all)</div>
+            
+                <div class="description hidden">
+                    <p>
+                        Para aprovação de um empréstimo, um banco usa as funções descritas abaixo:<br>
+                        - Aprovação do cadastro pessoal<br>
+                        - Aprovação do valor solicitado<br>
+                        Ambas retornam uma promise para fazer o  processamento em segundo plano (no código, este processamento está simulado).
+                    </p>
+
+                    <p>Para o cliente instanciado no código abaixo, foram executadas ambas as funções e criadas variáveis para armazenar este retorno.</p>
+
+                    <p>Usando o método '<strong>Promise.all()</strong>', recupere o resultado de ambas as promises e imprima 'APROVADO' ou 'REPROVADO', conforme os resultados das promises forem resolvidos ou rejeitados.</p>
+                
+                    <p>Por fim, imprima a frase 'Fim do Processamento', qualquer que seja o resultado (resolve ou reject) das promises ('finally').</p>
+
+                    <pre>
+                        <span class="linenumbers">
+                            <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i>
+                            <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i>
+                            <i></i> <i></i> <i></i>
+                        </span>
+
+                        <code>function aprovarDadosCadastrais( cliente ) {<br>    return new Promise( (resolve, reject) => {<br>        if (cliente.cpf === 11111111111)<br>            resolve(true);<br>      else<br>            reject(false);<br>  });<br>}<br><br>function aprovarValorSolicitado( cliente, valor ) {<br>    return new Promise( (resolve, reject) => {<br>       if (cliente.margem >= valor)<br>            resolve(true);<br>       else<br>            reject(false);<br>     });<br>}<br><br>const cliente = { cpf: 11111111111, nome: 'Calleri', margem: 1000.0 };<br>const aprovacaoCadastro = aprovarDadosCadastrais(cliente);</br>const aprovacaoValor = aprovarValorSolicitado(cliente, 300.0);<br><br>// continue com o tratamento dos resultados de ambas as promises...</code>
+                    </pre> 
+
+                    <div class="exercise-buttons">
+                        <button class="code-button">ver código</button>
+                        <button class="run-button">Rodar exercício</button>
+                    </div>
+                </div>
+            </li>          
         </ul>
 
         <div class="code-container hidden-code">
