@@ -1,16 +1,13 @@
-import cpfValido from "./cpf.js";
+const cliente = { cpf: '11111111111', nome: 'Calleri', margem: 10000.0 };
 
-const cliente = { cpf: '', nome: 'Calleri', margem: 10000.0 };
-
-
-window.exercicio3 = () => {    
-    cliente.cpf = prompt("Digite seu CPF: ");
-    const valorEmprestimo = prompt(`Digite o valor do empréstimo:\nSua margem é ${cliente.margem}`);
+window.exercicio3 = () => {
     const aprovacaoCadastro = aprovarDadosCadastrais(cliente);
-    const aprovacaoValor = aprovarValorSolicitado(cliente, valorEmprestimo);
+    const aprovacaoValor = aprovarValorSolicitado(cliente, 6000.0);
 
     Promise.all([aprovacaoCadastro, aprovacaoValor])
-    .then(aprovarEmprestimo, recusarEmprestimo);
+    .then(aprovarEmprestimo)
+    .catch(recusarEmprestimo)
+    .finally(encerrarProcessamento);
 }
 
 function aprovarDadosCadastrais( cliente ) {
@@ -34,9 +31,17 @@ function aprovarValorSolicitado( cliente, valor ) {
 }
 
 function aprovarEmprestimo() {
-    alert("Empréstimo Aprovado!");
+    console.log("Empréstimo Aprovado!");
 }
 
 function recusarEmprestimo() {
-    alert("Empréstimo Recusado!");
+    console.log("Empréstimo Recusado!");
+}
+
+function encerrarProcessamento() {
+    console.log('Fim do Processamento');
+}
+
+function cpfValido(cpf) {
+    return cpf === '11111111111';
 }
