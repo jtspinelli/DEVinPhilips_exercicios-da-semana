@@ -17,6 +17,7 @@
     <script src="./scripts/ex5.js" defer type="module"></script>
     <script src="./scripts/ex6.js" defer type="module"></script>
     <script src="./scripts/ex7.js" defer type="module"></script>
+    <script src="./scripts/ex8.js" defer type="module"></script>
     <script src="./titles.js" defer></script>
     <script src="./run.js" defer></script>
     <script src="./showCode.js" defer type="module"></script>
@@ -216,6 +217,72 @@
                         a) Repare que o retorno desta API encapsula os dados dentro de um objeto '<em>data</em>'.<br>
                         b) Use as propriedades '_symbol_' e '_priceUsd_' do retorno para preencher os valores na frase.
                     </p>
+
+                    <div class="exercise-buttons">
+                        <button class="code-button">ver código</button>
+                        <button class="run-button">Rodar exercício</button>
+                    </div>
+                </div>
+            </li>
+
+            <li id="ex8">
+                <div class="exercise-title">Ex 8 - Fetch</div>
+            
+                <div class="description hiddena">
+                    <p>
+                        Existe a API <strong>'Random User Generator'</strong>, que gera usuários fakes para fins de testes e protótipos.<br>
+                        Vamos usá-la para praticar e consumir APIs com promises.
+                    </p>
+
+                    <p>
+                        A URL da API é esta abaixo, onde o argumento 'results' representa a quantidade de resultados que queremos retornar:<br>
+                        <a href="https://randomuser.me/api/?results=4" target="_blank" rel="noopener noreferrer">https://randomuser.me/api/?results=4</a>                        
+                    </p>
+
+                    <p>Verifique a documentação e exemplo de retorno em:</p>
+
+                    <p class="blockquote"> 
+                        <a href="https://randomuser.me/documentation#howto" target="_blank">                          
+                            <span style="position: relative;">
+                                <img src="https://randomuser.me/favicon.ico" alt="">
+                            </span>
+                            <span class="text">
+                                Random User Generator | Documentation
+                            </span>                          
+                        </a>
+                    </p>
+
+                    <p>ou faça uma chamada para a API (no navegador ou console) para verificar um exemplo de resultado.</p>
+                
+                    <p>
+                        Com base no json de retorno, monte uma página web com layout semelhante ao <strong>anexo</strong>, contendo dados de usuários de sistema com
+                        foto, título, nome, sobrenome, e-mail e endereço completo.<br>
+                        O layout (css) é livre, desde que apresente as informações solicitadas.
+                    </p>
+
+                    <p>
+                        <strong>Dicas</strong>:<br>
+                        a) Perceba que os resultados ficam dentro do campo <em>'results'</em> do json de retorno;<br>
+                        b) Para a foto, use a versão grande do campo <em>'picture'</em>_: 'large' (grande);<br>
+                        c) Para o nome, use os campos de <em>'name'</em>: 'title' (título), 'first' (nome), 'last' (sobrenome);<br>
+                        d) Para o endereço, use os campos de <em>'location'</em>: 'street' (rua), 'city' (cidade), 'state' (estado), 'country' (país);<br>
+                        e) Como é uma chamada remota para o serviço, o resultado pode demorar alguns segundos para retornar.
+                    </p>
+
+                    <p class="ultimo-p-enunciado">
+                        <strong>Extra</strong>:
+                        Adicione um campo para que o usuário selecione a quantidade de itens que deseja exibir.
+                    </p>
+
+                    <ul id="ex8-userlist"></ul>
+
+                    <hr>
+
+                    <p>Selecione abaixo a quantidade de usuários que deseja mostrar e clique em "Rodar exercício".</p>
+
+                    <input class="slider" type="range" id="users-amount-select" min="4" max="20" value="10">
+                    <p id="slider-label">Valor: <span id="users-amount">10</span></p>
+
 
                     <div class="exercise-buttons">
                         <button class="code-button">ver código</button>
