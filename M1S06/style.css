@@ -1,6 +1,7 @@
 .description {
     background-color: #f4f5f7;
-    max-height: 950px;
+    /* max-height: 950px; */
+    max-height: 3000px;
     padding: 15px;
     overflow: hidden;
     transition: 1s;
@@ -38,4 +39,74 @@
 
 .description p.horario.horario-ativo {
     color: rgb(237 100 47);
+}
+
+#ex8-userlist {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#ex8-userlist li {
+    background-color: #a1bbe7;
+    height: 100px;
+    position: relative;
+}
+
+#ex8-userlist li > div * {
+    margin: 0;
+}
+
+#ex8-userlist li img {
+    height: 100px;
+    aspect-ratio: 1 / 1;
+}
+
+#ex8-userlist li > div {
+    position: absolute;
+    top: 0;
+    left: 110px;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+    height: 7px;
+    background: rgb(219, 219, 219);
+    background-image: linear-gradient(#ff4500, #ff4500);
+    background-size: 37% 100%;
+    background-repeat: no-repeat;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #1f488f;   
+    width: 18px;
+    aspect-ratio: 1 /1;
+    border-radius: 50%;
+}
+
+li#ex8 hr {
+    margin: 30px 0;
+}
+
+li#ex8 p.ultimo-p-enunciado {
+    margin: 0;
+}
+
+#slider-label {
+    font-size: 1rem;
+    text-align: center;
+}
+
+#slider-label span {
+    color: #ff4500;
+    font-weight: bold;
 }
