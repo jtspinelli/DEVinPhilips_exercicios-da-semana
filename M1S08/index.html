@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M1S08 - Exercícios</title>
+    <link rel="stylesheet" href="../M1S03/styles/base.css">
+    <link rel="stylesheet" href="../M1S03/styles/styles.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./titles.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="../index.html"><button>voltar</button></a>
+        <div>
+            <h2>Módulo 1 - <span>Exercícios da Semana 08</span></h2> 
+        </div>        
+    </header>
+
+    <main>
+        <ul id="m1s08">
+            <li id="ex1">
+                <div class="exercise-title">Exercício: App de Notificações</div>
+            
+                <div class="description hidden">
+                    <p> 
+                        &#9679; Criação do projeto - Crie uma aplicação angular usando o CLI<br>
+                        - sem roteamento (routing=false)<br>
+                        - style(scss)<br>
+                        - com o prefixo <strong>ntap</strong>
+                    </p>
+
+                    <p>
+                        &#9679; Bootstrap<br>
+                        - Instale Bootstrap, Framework CSS que vamos utilizar para estilizarmos nossa aplicação<br>
+                        - Configure os arquivos na configuração de estilo do projeto angular
+                    </p>
+
+                    <p>
+                        &#9679; Component de listagem<br>
+                        - Crie um componente para a listagem de notificações (notification-list)<br>
+                        - Sugestão para componente do bootstrap (list-group-item)<br>
+                        - Adicione alguns itens de exemplos para listagem<br>
+                        - Título, subtítulo e data.
+                    </p>
+
+                    <p>
+                        &#9679; Criação de menu superior(navbar)<br>
+                        - adicione a logo imagem e o nome da aplicação (NotificationApp)<br>
+                        - Por enquanto, pode ser adicionado no componente de listagem, posteriormente será movido para seu próprio componente
+                    </p>
+
+                    <p>
+                        &#9679; Criação de rodapé (footer)<br>
+                        - Informações do ano de criação da aplicação e a empresa.<br>
+                        - Por enquanto, pode ser adicionado no componente de listagem, posteriormente será movido para seu próprio componente.
+                    </p>
+
+                    <p>
+                        &#9679; Transforme o menu superior e o rodapé e um componente para cada (header e footer).<br>
+                        - Chame através das tags do seletor dentro do componente da listagem.
+                    </p>
+
+                    <p>
+                        &#9679; Crie uma variável no arquivo TS do componente para os valores estáticos que estão no template para passar a olhar para o TS do componente.
+                    </p>
+
+                    <p>
+                        &#9679; Extrair da variável para uma arquivo typescript só para armazenar os valores estáticos.<br>
+                        - Utilize o ng-for para realizar o loop no template.
+                    </p>
+
+                    <p>
+                        &#9679; Adicione uma nova propriedade booleana "lido" para os objetos na constante.<br>
+                        - Crie um botão para "lido" quando for realizado o clique do botão, deve alterar o status de "false" para "true".
+                    </p>
+
+                    <p>
+                        &#9679; Crie uma classe de estilização para diminuir a opacidade da linha ou alteração da cor da fonte.<br>
+                        - Quando acontecer o clique no botão o valor do lido passara a ser "true" e no template deve ser adicionado um ngClass.
+                    </p>
+
+                    <div class="exercise-buttons">
+                        <button class="code-button"><a href="https://github.com/jtspinelli/DEVinPhilips_Angular_exercicios-da-semana/tree/master/src/app/M1S08" target="_blank" rel="noopener noreferrer">ver código</a></button>
+                        <button class="run-button"><a href="https://dih-philips-ng-week-exercises.herokuapp.com/m1s08" target="_blank" rel="noopener noreferrer">Ver exercício</a></button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </main>
+</body>
+</html>
