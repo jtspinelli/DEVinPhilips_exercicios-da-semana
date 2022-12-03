@@ -21,7 +21,7 @@
     <main>
         <ul id="m1s09">
             <li id="ex1">
-                <div class="exercise-title">Part 1: Registro de Matérias</div>
+                <div class="exercise-title">Parte 1: Registro de Matérias</div>
             
                 <div class="description hidden">
                     <p>
@@ -61,6 +61,46 @@
                     <div class="exercise-buttons">
                         <button class="code-button"><a href="https://github.com/jtspinelli/DEVinPhilips_Angular_exercicios-da-semana/tree/master/src/app/M1S09/part1" target="_blank" rel="noopener noreferrer">ver código</a></button>
                         <button class="run-button"><a href="https://dih-philips-ng-week-exercises.herokuapp.com/m1s09/part1" target="_blank" rel="noopener noreferrer">Ver exercício</a></button>
+                    </div>
+                </div>
+            </li>
+
+            <li id="ex2">
+                <div class="exercise-title">Parte 2: Série Favorita (Card)</div>
+            
+                <div class="description hiddena">
+                    <p>
+                        Crie um componente que será um card, este card poderá ser utilizado para indicar algumas informações sobre personagens da sua série favorita, exemplo, minha série favorita é <strong>Game Of Thrones</strong>, um de seus personagens é o Jon Snow. Essas informações são: <strong>nome</strong>, uma <strong>imagem</strong>, <strong>nome do ator</strong>, e uma breve <strong>descrição</strong>. No início esse componente será chamado de item-card e as informações serão fixas, escolha apenas um personagem.
+                    </p>
+
+                    <hr>
+
+                    <p>Com o mesmo componente criado anteriormente no exercício 2 iremos com a ajuda do property binding criaremos um objeto chamado personagem com o seguinte formato:</p>
+
+                    <p class="blockquote"> Exemplo:</p>
+
+                    <pre>
+                        <span class="linenumbers">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </span>
+                        <code>pesonagem: any = {<br>    nome: 'Jon Snow',<br>   imagem: 'https://tm.ibxk.com.br/2022/08/26/26174558850404.jpg?    ims=704x264',<br>    nomeAtor: 'Kit Harington',<br>    descricao:<br>        'Ator ator britânico. É mais conhecido por interpretar Jon Snow na     série televisiva Game of Thrones da HBO. Meu marido, mas ele não sabe U.u',<br>};</code>                        
+                    </pre>
+
+                    <p>Sua missão será passar cada informação do objeto através do property binding, para substituir as informações antes fixas no template do componente item-card.</p>
+
+                    <hr>
+
+                    <p>Continuando nossa função de tornar um componente dinâmico iremos mudar a declaração do objeto, anteriormente criado no próprio componente, para ser passada através do <strong>@input</strong> do componente pai para o filho (item-card).</p>
+                
+                    <div class="exercise-buttons">
+                        <button class="code-button"><a href="https://github.com/jtspinelli/DEVinPhilips_Angular_exercicios-da-semana/tree/master/src/app/M1S09/part2" target="_blank" rel="noopener noreferrer">ver código</a></button>
+                        <button class="run-button"><a href="https://dih-philips-ng-week-exercises.herokuapp.com/m1s09/part2" target="_blank" rel="noopener noreferrer">Ver exercício</a></button>
                     </div>
                 </div>
             </li>
