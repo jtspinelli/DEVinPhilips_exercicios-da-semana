@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M1S010 - Exercícios</title>
+    <link rel="stylesheet" href="../M1S03/styles/base.css">
+    <link rel="stylesheet" href="../M1S03/styles/styles.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="./titles.js"defer></script>
+</head>
+<body>
+    <header>
+        <a href="../index.html"><button>voltar</button></a>
+        <div>
+            <h2>Módulo 1 - <span>Exercícios da Semana 10</span></h2> 
+        </div>        
+    </header>
+
+    <main>
+        <ul id="m1s10">
+            <li id="ex1">
+                <div class="exercise-title">Aprimorar o NotificationApp da M1S08</div>
+            
+                <div class="description hidden">
+                    <p>
+                        Adicionar componente de filtro para as notificações.<br>
+                        A componente deve apresentar 3 botões, para filtrar as notificações por:
+                        - Todos
+                        - Não lidos
+                        - Lidos
+                    </p>
+
+                    <p>Utilizar o decorator <strong>Output</strong> para criar um <strong>EventEmitter</strong> na componente de filtro.</p>
+
+                    <p>
+                        A lista de notificações deve ser movida para uma nova página, chamada <strong>Home</strong>.
+                    </p>
+
+                    <p>
+                        Devem ser criadas rotas para cada tipo de filtro (todas as variações abaixo devem enviar para HomeComponent):<br>
+                        - home/todos<br>
+                        - home/lidos<br>
+                        - home/nao-lidos
+                    </p>
+
+                    <p>
+                        A componente de listagem das notificações deve captar qual filtro está ativo através da rota atual (utilizar <a class="inline-anchor-tag" href="https://angular.io/api/router/ActivatedRoute" target="_blank" rel="noopener noreferrer">ActivatedRoute</a>).
+                    </p>
+
+                    <div class="exercise-buttons">
+                        <button class="code-button"><a href="https://github.com/jtspinelli/DEVinPhilips_Angular_exercicios-da-semana/tree/master/src/app/M1S10" target="_blank" rel="noopener noreferrer">ver código</a></button>
+                        <button class="run-button"><a href="https://dih-philips-ng-week-exercises.herokuapp.com/m1s10/home/todos" target="_blank" rel="noopener noreferrer">Ver exercício</a></button>
+                    </div>
+                </div>                
+            </li>
+        </ul>
+    </main>
+</body>
+</html>
